@@ -1,0 +1,235 @@
+/* About Page Start */
+
+
+/* Hero Section Start */
+
+
+.about-hero{
+    margin-top: 5rem;
+    padding: 5rem;
+    background-color: #FFDAAB1A;
+    position: relative;
+}
+
+.about-hero h2{
+    line-height: 1.8;
+}
+
+.about-hero p{
+    line-height: 1.8;
+    color: #626262;
+}
+
+.about-hero .img-1{
+    position: absolute;
+    top: 10%;
+    right: 0;
+    height: 85%;
+    animation: Slidemoves 2s infinite alternate;
+}
+
+
+@keyframes Slidemoves {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-6px); 
+    }
+}
+
+@media (max-width: 1026px) {
+    .about-hero .img-1{
+        position: static;
+        animation: none;
+        width: 95%;
+        height: auto;
+    }
+}
+@media (max-width: 992px) {
+    .about-hero{
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero .img-hero{
+        width: 270px;
+    }
+}
+
+@media (max-width: 400px) {
+    .about-hero .img-hero{
+        width: 250px;
+    }
+}
+
+@media (max-width: 350px) {
+    .about-hero .img-hero{
+        width: 220px;
+    }
+}
+
+@media (max-width: 320px) {
+    .about-hero .img-hero{
+        width: 190px;
+    }
+}
+/* Hero Section End */
+
+
+
+/* About Section Start */
+
+.section-describe{
+    margin-top: 5rem;
+}
+
+.section-describe .vision, .mission{
+    background-color: #EFF6FF80;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.section-describe .vision{
+    transition: transform 2s ease;
+}
+
+.section-describe .vision:hover{
+    transform: scale(1.03);
+}
+
+.section-describe .mission{
+    transition: transform 2s ease;
+}
+
+.section-describe .mission:hover{
+    transform: scale(1.03);
+}
+
+/* About Section End */
+
+
+
+/* Question Section Start */
+
+.section-question{
+    margin-top: 5rem;
+    background-color: #FBFBFB;
+    padding: 5rem;
+}
+
+.section-question h4{
+    font-size: 32px;
+}
+
+.section-question .card{
+    border: none !important;
+    cursor: pointer;
+    background-color: #fff;
+    padding: 1.5rem;
+    height: 220px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.03);
+    transition: transform 3s;
+}
+
+
+.section-question .card h6{
+    padding: 0.6rem 0 0;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.section-question .card:hover{
+    transform: scale(1.05);
+}
+
+.section-question .card p{
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 576px) {
+    .section-question .card{
+        height: auto;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .section-question .card{
+        width: 180px;
+        height: auto;
+    }
+}
+
+/* Question Section End */
+
+
+/* Serve Section Start */
+
+.section-serve{
+    margin-top: 5rem;
+}
+
+.section-serve h4{
+    font-size: 32px;
+}
+
+.section-serve .card{
+    border: none !important;
+    padding: 1.5rem;
+    background: linear-gradient(
+        to bottom right,
+        rgba(251, 174, 78, 0.2),
+        rgba(235, 130, 0, 0.05)
+    );
+    height: 200px;
+    cursor: pointer;
+    transition: transform 3s;
+
+}
+
+.section-serve .card:hover{
+    transform: scale(1.04);
+}
+
+.section-serve .card h6{
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.section-serve .card p{
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+@media (max-width: 576px) {
+    .section-serve .card{
+        height: auto;
+    }
+}
+
+/* Serve Section End */
+
+
+.section-commit{
+    margin-top: 6rem;
+}
+
+.section-commit h4{
+    font-size: 32px;
+}
+
+.section-commit p{
+    line-height: 1.8;
+    margin: 8px 0 0;
+    color: #626262;
+}
+
+
+
+/* About Page End */
