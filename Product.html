@@ -40,16 +40,16 @@
           <a href="index.html"
             ><img src="assets/images/Logo.webp" class="img-fluid" alt=""
           /></a>
-          <ul class="nav-links">
-            <li><a href="index.html" class="nav-item">Home</a></li>
-            <li><a href="automation.html" class="nav-item">Automation</a></li>
-            <li><a href="Product.html" class="nav-item">Product Tour</a></li>
-            <li><a href="about.html" class="nav-item">About Us</a></li>
-            <li><a href="contact2.html" class="nav-item">Contact Us</a></li>
-          </ul>
-          <div class="nav-side">
-            <a href="" class="btn-demo">Download Broucher</a>
-          </div>
+<ul class="nav-links">
+  <li><a href="index.html" class="nav-item">Home</a></li>
+  <li><a href="automation.html" class="nav-item">Automation</a></li>
+  <li><a href="Product.html" class="nav-item">Product Tour</a></li>
+  <li><a href="about.html" class="nav-item">About Us</a></li>
+  <li><a href="contact2.html" class="nav-item">Contact Us</a></li>
+  <li class="mobile-btn"><a href="#" class="btn-demo">Download Broucher</a></li>
+</ul>
+
+
           <!-- Responsive Menus -->
           <div class="responsive-menus">
             <i class="fa-solid fa-bars" id="menuToggle"></i>
@@ -316,7 +316,8 @@
             />
           </div>
           <div class="col-md-6">
-            <input type="datetime-local" class="form-control" required />
+             <input type="datetime-local" id="dateInput" class="form-control" />
+  <label for="dateInput" class="date-placeholder">dd-mm-yy</label>
           </div>
           <div class="col-md-12">
             <textarea
@@ -435,5 +436,17 @@
         });
       });
     </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      menuToggle.classList.toggle("active");
+    });
+  });
+</script>
+
   </body>
 </html>
