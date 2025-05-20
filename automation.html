@@ -36,23 +36,31 @@
     <!-- ******** Header Start ******* -->
     <header>
       <nav class="container-fluid p-3 navbar">
-        <div class="container">
-          <a href="index.html"
-            ><img src="assets/images/Logo.webp" class="img-fluid" alt=""
-          /></a>
+        <div class="container nav-wrapper">
+          <div class="nav-logo">
+            <a href="index.html">
+              <img src="assets/images/Logo.webp" class="img-fluid" alt="Logo" />
+            </a>
+          </div>
+
           <ul class="nav-links">
-            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="home.html" class="nav-item">Home</a></li>
             <li><a href="automation.html" class="nav-item">Automation</a></li>
             <li><a href="Product.html" class="nav-item">Product Tour</a></li>
             <li><a href="about.html" class="nav-item">About Us</a></li>
             <li><a href="contact2.html" class="nav-item">Contact Us</a></li>
-            <li class="mobile-btn">
+            <li class="download-mobile">
               <a href="#" class="btn-demo">Download Broucher</a>
             </li>
           </ul>
-          <!-- Responsive Menus -->
-          <div class="responsive-menus">
-            <i class="fa-solid fa-bars" id="menuToggle"></i>
+
+          <div class="nav-side">
+            <!-- Visible only on desktop -->
+            <a href="#" class="btn-demo download-desktop">Download Broucher</a>
+
+            <div class="responsive-menus">
+              <i class="fa-solid fa-bars" id="menuToggle"></i>
+            </div>
           </div>
         </div>
       </nav>
@@ -228,11 +236,14 @@
                   alt=""
                 />
               </div>
-             <div class="text-wrapper">
+              <div class="text-wrapper">
                 <p>
                   <span>Transportation Automation</span>
                 </p>
-                <p class="automated-text mt-2" style="color: #626262; line-height: 1.8">
+                <p
+                  class="automated-text mt-2"
+                  style="color: #626262; line-height: 1.8"
+                >
                   Ensure student safety with real-time bus tracking and
                   automated pickup/drop alerts for parents.
                 </p>
@@ -260,37 +271,49 @@
           <div class="col-lg-4 col-12"></div>
           <div class="col-lg-8 col-12">
             <div class="d-flex gap-5 align-items-center">
-            <div class="image-wrapper">
+              <div class="image-wrapper">
                 <img
                   src="assets/images/Books.png"
                   class="img-fluid img-1"
                   alt=""
                 />
               </div>
-             <div class="text-wrapper">
-                <p><span>
-                  Academic Automation
-                  </span>
-                </p>
-                <p class="automated-text mt-2" style="color: #626262; line-height: 1.8">
+              <div class="text-wrapper">
+                <p><span> Academic Automation </span></p>
+                <p
+                  class="automated-text mt-2"
+                  style="color: #626262; line-height: 1.8"
+                >
                   Automate exams, assignments, and performance tracking for
                   smarter academic management.
                 </p>
               </div>
             </div>
 
-            <div class="automated-text mt-3 box-1" data-aos="fade-up" data-aos-duration="1000">
+            <div
+              class="automated-text mt-3 box-1"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <h6 class="fw-bold">Exam & Mark Entry Automation</h6>
               <p>Auto-generate report cards based on marks entered.</p>
             </div>
-            <div class="automated-text mt-3 box-2" data-aos="fade-up" data-aos-duration="1000">
+            <div
+              class="automated-text mt-3 box-2"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <h6 class="fw-bold">Homework & Assignment Alerts</h6>
               <p>
                 Automated reminders for students about assignments and
                 deadlines.
               </p>
             </div>
-            <div class="automated-text mt-3 box-3" data-aos="fade-up" data-aos-duration="1000">
+            <div
+              class="automated-text mt-3 box-3"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <h6 class="fw-bold">Performance Analytics</h6>
               <p>
                 AI-driven student performance tracking and improvement

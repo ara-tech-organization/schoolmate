@@ -36,23 +36,31 @@
     <!-- ******** Header Start ******* -->
     <header>
       <nav class="container-fluid p-3 navbar">
-        <div class="container">
-          <a href="index.html"
-            ><img src="assets/images/Logo.webp" class="img-fluid" alt=""
-          /></a>
-<ul class="nav-links">
-  <li><a href="index.html" class="nav-item">Home</a></li>
-  <li><a href="automation.html" class="nav-item">Automation</a></li>
-  <li><a href="Product.html" class="nav-item">Product Tour</a></li>
-  <li><a href="about.html" class="nav-item">About Us</a></li>
-  <li><a href="contact2.html" class="nav-item">Contact Us</a></li>
-  <li class="mobile-btn"><a href="#" class="btn-demo">Download Broucher</a></li>
-</ul>
+        <div class="container nav-wrapper">
+          <div class="nav-logo">
+            <a href="index.html">
+              <img src="assets/images/Logo.webp" class="img-fluid" alt="Logo" />
+            </a>
+          </div>
 
+          <ul class="nav-links">
+            <li><a href="home.html" class="nav-item">Home</a></li>
+            <li><a href="automation.html" class="nav-item">Automation</a></li>
+            <li><a href="Product.html" class="nav-item">Product Tour</a></li>
+            <li><a href="about.html" class="nav-item">About Us</a></li>
+            <li><a href="contact2.html" class="nav-item">Contact Us</a></li>
+            <li class="download-mobile">
+              <a href="#" class="btn-demo">Download Broucher</a>
+            </li>
+          </ul>
 
-          <!-- Responsive Menus -->
-          <div class="responsive-menus">
-            <i class="fa-solid fa-bars" id="menuToggle"></i>
+          <div class="nav-side">
+            <!-- Visible only on desktop -->
+            <a href="#" class="btn-demo download-desktop">Download Broucher</a>
+
+            <div class="responsive-menus">
+              <i class="fa-solid fa-bars" id="menuToggle"></i>
+            </div>
           </div>
         </div>
       </nav>
@@ -62,25 +70,25 @@
     <!-- Hero Section Start -->
 
     <section class="hero-sections">
-        <div class="hero-section">
-      <div class="hero-content mt-5">
-        <h1>
-          Experience the Power of Seamless<br />School Management — Live in
-          Action!
-        </h1>
-        <p class="mt-4">
-          Book your personalized demo of SchoolMate and discover how our smart
-          tools can simplify administration, boost parent communication, and
-          improve academic efficiency.
-        </p>
-      </div>
-      <div class="hero-image-container">
-        <img
-          src="assets/images/graph.webp"
-          alt="Demo Dashboard"
-          class="hero-image"
-        />
-      </div>
+      <div class="hero-section">
+        <div class="hero-content mt-5">
+          <h1>
+            Experience the Power of Seamless<br />School Management — Live in
+            Action!
+          </h1>
+          <p class="mt-4">
+            Book your personalized demo of SchoolMate and discover how our smart
+            tools can simplify administration, boost parent communication, and
+            improve academic efficiency.
+          </p>
+        </div>
+        <div class="hero-image-container">
+          <img
+            src="assets/images/graph.webp"
+            alt="Demo Dashboard"
+            class="hero-image"
+          />
+        </div>
       </div>
     </section>
     <!-- Hero Section ends -->
@@ -259,24 +267,23 @@
     </section>
     <!-- HIW Section End -->
 
-<section class="youtube-section">
-  <div class="youtube-container">
-    <a
-      href="https://youtu.be/Cu0thff8CrE?si=7PQmqsUYe5thh44v"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="youtube-thumbnail"
-    >
-      <img
-        src="/assets/images/image (3).webp"
-        alt="YouTube Demo Preview"
-        class="youtube-image"
-      />
-      <div class="play-button">&#9658;</div>
-    </a>
-  </div>
-</section>
-
+    <section class="youtube-section">
+      <div class="youtube-container">
+        <a
+          href="https://youtu.be/Cu0thff8CrE?si=7PQmqsUYe5thh44v"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="youtube-thumbnail"
+        >
+          <img
+            src="/assets/images/image (3).webp"
+            alt="YouTube Demo Preview"
+            class="youtube-image"
+          />
+          <div class="play-button">&#9658;</div>
+        </a>
+      </div>
+    </section>
 
     <section class="demo-booking-wrapper">
       <!-- RIGHT SIDE: Booking Form -->
@@ -316,8 +323,8 @@
             />
           </div>
           <div class="col-md-6">
-             <input type="datetime-local" id="dateInput" class="form-control" />
-  <label for="dateInput" class="date-placeholder">dd-mm-yy</label>
+            <input type="datetime-local" id="dateInput" class="form-control" />
+            <label for="dateInput" class="date-placeholder">dd-mm-yy</label>
           </div>
           <div class="col-md-12">
             <textarea
@@ -437,16 +444,15 @@
       });
     </script>
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.querySelector(".nav-links");
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.querySelector(".nav-links");
 
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      menuToggle.classList.toggle("active");
-    });
-  });
-</script>
-
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+          menuToggle.classList.toggle("active");
+        });
+      });
+    </script>
   </body>
 </html>

@@ -36,23 +36,31 @@
     <!-- ******** Header Start ******* -->
     <header>
       <nav class="container-fluid p-3 navbar">
-        <div class="container">
-          <a href="index.html"
-            ><img src="assets/images/Logo.webp" class="img-fluid" alt=""
-          /></a>
+        <div class="container nav-wrapper">
+          <div class="nav-logo">
+            <a href="index.html">
+              <img src="assets/images/Logo.webp" class="img-fluid" alt="Logo" />
+            </a>
+          </div>
+
           <ul class="nav-links">
-            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="home.html" class="nav-item">Home</a></li>
             <li><a href="automation.html" class="nav-item">Automation</a></li>
             <li><a href="Product.html" class="nav-item">Product Tour</a></li>
             <li><a href="about.html" class="nav-item">About Us</a></li>
             <li><a href="contact2.html" class="nav-item">Contact Us</a></li>
+            <li class="download-mobile">
+              <a href="#" class="btn-demo">Download Broucher</a>
+            </li>
           </ul>
+
           <div class="nav-side">
-            <a href="" class="btn-demo">Download Broucher</a>
-          </div>
-          <!-- Responsive Menus -->
-          <div class="responsive-menus">
-            <i class="fa-solid fa-bars" id="menuToggle"></i>
+            <!-- Visible only on desktop -->
+            <a href="#" class="btn-demo download-desktop">Download Broucher</a>
+
+            <div class="responsive-menus">
+              <i class="fa-solid fa-bars" id="menuToggle"></i>
+            </div>
           </div>
         </div>
       </nav>
@@ -107,7 +115,7 @@
       </div>
     </section>
 
-    <section class=" contact-section ">
+    <section class="contact-section">
       <!-- Left: Google Map -->
       <div class="map-container">
         <iframe
@@ -135,11 +143,14 @@
       <div class="cta-content">
         <h2>Interested in a Demo?</h2>
         <p>
-        Jump to our Demo Page to schedule a one-on-one product walkthrough.<br />
+          Jump to our Demo Page to schedule a one-on-one product walkthrough.<br />
           <strong>Ready to experience the future of school management?</strong>
-
         </p>
-         <button class="btn-demo mt-3"><a  style="color: white !important;" href="" class="p-2">Book a free Demo</a></button>
+        <button class="btn-demo mt-3">
+          <a style="color: white !important" href="" class="p-2"
+            >Book a free Demo</a
+          >
+        </button>
       </div>
     </section>
 
