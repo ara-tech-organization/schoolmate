@@ -3103,6 +3103,11 @@ p {
     top: 40%;
   }
 }
+@media (max-width:400px){
+   .youtube-thumbnail {
+    height: 300px;
+  }
+}
 
 /* contact2-------------------------------- */
 
