@@ -1,380 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Schoolmate</title>
-    <link rel="shortcut icon" href="assets/images/Favicon.webp" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/images/Favicon.webp"
+      type="image/x-icon"
+    />
 
     <!-- ******** Link CSS ******* -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
 
     <!-- ******* Icon  ********-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    rel="stylesheet"/>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+    />
 
     <!-- ******** Bootstrap ********** -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
     <!-- ***** Swiper Js **** -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <!-- ***** AOS ***** -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-</head>
-<body>
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+  </head>
+  <body>
     <!-- ******** Header Start ******* -->
-     <header>
-        <nav class="container-fluid p-3 navbar">
-            <div class="container">
-                <a href="index.html"><img src="assets/images/Logo.webp" class="img-fluid" alt=""></a>
-                <ul class="nav-links">
-  <li><a href="index.html" class="nav-item">Home</a></li>
-  <li><a href="automation.html" class="nav-item">Automation</a></li>
-  <li><a href="Product.html" class="nav-item">Product Tour</a></li>
-  <li><a href="about.html" class="nav-item">About Us</a></li>
-  <li><a href="contact2.html" class="nav-item">Contact Us</a></li>
-  <li class="mobile-btn"><a href="#" class="btn-demo">Download Broucher</a></li>
-</ul>
+    <header>
+      <nav style="background-color: #fff;" class="container-fluid p-3 navbar">
+  <div class="container nav-wrapper">
+    <div class="nav-logo">
+      <a href="home.html">
+        <img src="assets/images/Logo.webp" class="img-fluid" alt="Logo" />
+      </a>
+    </div>
 
-                  <!-- Responsive Menus -->
-                  <div class="responsive-menus">
-                    <i class="fa-solid fa-bars" id="menuToggle"></i>
-                 </div>
-            </div>
-        </nav>
-     </header>
+    <ul class="nav-links">
+      <li><a href="home.html" class="nav-item home active">Home</a></li>
+  <li><a href="automation3.html" class="nav-item ">Automation</a></li>
+  <li><a href="Product.html" class="nav-item ">Product Tour</a></li>
+  <li><a href="about2.html" class="nav-item ">About Us</a></li>
+  <li><a href="contact2.html" class="nav-item ">Contact Us</a></li>
+      <li class="download-mobile">
+        <a href="Broucher.html" class="btn-demo">Download Broucher</a>
+      </li>
+    </ul>
+
+    <div class="nav-side">
+      <!-- Visible only on desktop -->
+      <a href="Broucher.html" class="btn-demo download-desktop p-2">Download Broucher</a>
+
+      <div class="responsive-menus">
+        <i class="fa-solid fa-bars" id="menuToggle"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="section-unique-hero w-100 text-center">
+  <div class="container p-5 content-wrapper">
+    <div class="row justify-content-center align-items-center">
+      <div class="col-xl-8 col-lg-10 col-12">
+        <h1 class="hero-heading">
+         Redefining School Management –
+All in One Software
+        </h1>
+        <p class="hero-subtext mt-2">
+        Empower Administrators, Teachers, Parents & Students with Smart, Seamless Tools.
+        </p>
+        <!-- <button class="btn-demo mt-3">
+          <a href="#" class="p-2 text-white text-decoration-none">Book a free Demo</a>
+        </button> -->
+      </div>
+    </div>
+  </div>
+  <div class="hero-image-wrapper">
+    <img
+      src="assets/images/graph.webp"
+      class="img-fluid hero-image"
+      alt="Graph"
+    />
+  </div>
+</section>
+    </header>
     <!-- ********** Header End ******** -->
 
     <!-- ******** Hero Section Start ********* -->
-     <section class="section-hero container-fluid text-center">
-        <div class="container p-5">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-8 col-md-10 col-12">
-                    <h1>Effortless School Management – <br>
-                        A Smarter Way to Connect & Educate</h1>
-                        <p class="mt-2">Modern schools need modern solutions. Schoolmate is your one-stop platform for <br> seamless communication,
-                            smart administration, and AI-powered insights.</p>
-                    <button class="btn-demo mt-3"><a href="" class="p-2">Book a free Demo</a></button>
-                    <img src="assets/images/graph.webp" class="img-fluid mt-4  graph" alt="">
-                </div>
-            </div>
 
-        </div>
-     </section>
     <!-- ******** Hero Section End  ********** -->
-
-    <!-- ********* Section Solution Start *********  -->
-    <section class="section-solution"
-    data-aos="fade-up"
-    data-aos-duration="1500">
-        <div class="container">
-            <h3 class="text-center heading">Smart, Simple Solutions You'll Love</h3>
-            <div class="row mx-auto my-auto g-5 mt-5">
-                <div class="col-lg-6 col-12 colmn-1">
-                    <div class="d-flex gap-4 align-items-center">
-                        <img src="assets/images/check-icon.webp" class="img-fluid" alt="">
-                        <h6 class="fw-bold">User-Friendly Experience</h6>
-                    </div>
-                    <p class="mt-3 ms-4">A clean, intuitive interface for teachers, students, and administrators, enabling effortless school management with one-click attendance, easy fee collection, and instant communication.</p>
-                </div>
-                <div class="col-lg-6 col-12 colmn-2">
-                    <div class="d-flex gap-4 align-items-center">
-                        <img src="assets/images/check-icon-2.webp" class="img-fluid" alt="">
-                        <h6 class="fw-bold">Customizable & Efficient Setup</h6>
-                    </div>
-                    <p  class="mt-3 ms-4">SchoolMate adapts to any institution with role-based access, scalable modular features, and seamless system integration for effortless management.</p>
-                </div>
-                <div class="col-lg-6 col-12 colmn-3">
-                    <div class="d-flex gap-4 align-items-center">
-                        <img src="assets/images/icon-3.webp" class="img-fluid" alt="">
-                        <h6 class="fw-bold">Effortless Collaboration</h6>
-                    </div>
-                    <p  class="mt-3 ms-4">Keep your school community connected with instant alerts on attendance, exams, homework, assignments, and important announcements etc.</p>
-                </div>
-                <div class="col-lg-6 col-12 colmn-4">
-                    <div class="d-flex gap-4 align-items-center">
-                        <img src="assets/images/icon-4.webp" class="img-fluid" alt="">
-                        <h6 class="fw-bold">Automation for Efficiency</h6>
-                    </div>
-                    <p  class="mt-3 ms-4">Ara Schoolmate automates reports, fees, and academics, reducing errors, saving time, and letting educators focus on student growth.</p>
-                </div>
+    <section class="feature-section" data-aos="fade-up"  data-aos-duration="1500">
+      <div class="feature-header">
+        <h2>Why Choose SchoolMate</h2>
+        <p>
+          <span class="blue">Smart.</span>
+          <span class="purple">Simple.</span>
+          <span class="orange">Powerful.</span>
+        </p>
+      </div>
+ <div class="accordion-card" data-aos="fade-up"  data-aos-duration="1500">
+      <div class="accordion-grid">
+        <!-- Column 1 -->
+        <div class="accordion-col">
+          <div class="accordion-item">
+            <div class="summary">
+              <i class="fa-solid fa-comment-dots"></i>
+              Seamless Parent–Teacher Communication
+              <i class="fa-solid fa-chevron-down arrow"></i>
             </div>
+            <div class="content">
+              Enable effortless and real-time communication between parents and
+              teachers with instant updates on attendance, performance, and
+              school activities — all in one place.
+            </div>
+          </div>
 
+          <div class="accordion-item">
+            <div class="summary">
+              <i class="fa-solid fa-file-pen"></i>
+              Auto Exam Entry & Instant Report Cards
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <div class="content">
+             Save time with auto exam entry and generate instant report cards—streamlining assessments and ensuring timely performance insights for parents and teachers.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="summary">
+              <i class="fa-solid fa-book-open-reader"></i>
+              Homework Upload & Study Material Sharing
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <div class="content">
+              Easily upload homework and share study materials with students and parents, ensuring consistent learning beyond the classroom.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="summary">
+              <i class="fa-solid fa-book-open-reader"></i>
+             Live Attendance & Report Dashboards
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <div class="content">
+             Track student attendance in real-time and access insightful report dashboards for quick analysis, helping schools monitor performance and spot trends effortlessly.
+            </div>
+          </div>
         </div>
+
+        <!-- Column 2 -->
+        <div class="accordion-col">
+          <div class="accordion-item">
+            <div class="summary">
+              <i class="fa-solid fa-dollar-sign"></i>
+              Digital Fee Collection with Instant Reminders
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <div class="content">
+              Collect school fees securely through digital payments and send instant reminders to parents, ensuring timely and hassle-free transactions.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="summary">
+              <i class="fa-solid fa-calendar-days"></i>
+              Academic Calendar & Exam Timetable
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <div class="content">
+             Stay organized with a centralized academic calendar and detailed exam timetable—keeping parents, students, and teachers informed and prepared year-round.
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="summary">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              Intuitive Interface for Teachers & Admins
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <div class="content">
+              Empower teachers and admins with an intuitive, user-friendly interface designed for efficient class management, communication, and reporting.
+            </div>
+          </div>
+          <div class="accordion-item">
+            <div class="summary">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              Fully Mobile-Optimized Experience
+              <i class="fa-solid fa-chevron-down arrow"></i>
+            </div>
+            <div class="content">
+              Enjoy a smooth, fully mobile-optimized experience—access all features on-the-go with ease, from attendance tracking to communication and updates.
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <!-- ********* Section Solution End *********** -->
 
-    <!-- ******* Section Tab Start ********** -->
-    <section class="section-tab p-3"
-    data-aos="fade-up"
-    data-aos-duration="1500">
-        <div class="container p-5">
-            <h3 class="heading">SchoolMate -One Unified Solution for <br> Seamless School Management.</h3>
-            <div class="tab-header mt-5">
-                <img src="assets/images/Schoolmate Logo.webp" class="img-fluid" alt="">
-                <button class="tab-btn active" data-tab="tab-1">Basic</button>
-                <button class="tab-btn" data-tab="tab-2">Pro</button>
-                <button class="tab-btn" data-tab="tab-3">Plus</button>
-                <button class="tab-btn" data-tab="tab-4">360</button>
+    <section class="editions" id="editions-section" data-aos="fade-up"  data-aos-duration="1500">
+      <div class="container">
+        <div class="header-row">
+          <div>
+            <h2>SchoolMate Editions – <br />Scalable for Every School</h2>
+          </div>
+          <div>
+            <p class="subtitle">Check Solutions That Fit Every Campus</p>
+            <div class="tiers" id="tiers">
+              <button class="active">Lite</button>
+              <button>Pro</button>
+              <button>Plus</button>
+              <button>360</button>
             </div>
-            <div class="tab-content active mt-5" id="tab-1">
-                <div class="content-left">
-                    <h4 class="fw-bold line-height mt-2">Empower Learning with Smart Connectivity</h4>
-                    <p class="line-height mt-3">Stay ahead with an intelligent communication system that streamlines interactions between schools, parents, and staff. Automated news, circulars, and messages ensure timely updates, while real-time attendance alerts keep parents informed instantly. Multi-channel notifications via push alerts enhance engagement and ensure that no important update is missed.</p>
-                </div>
-                <div class="content-right">
-                    <img src="assets/images/Graph-2.webp" class="img-fluid" alt="">
-                </div>
-            </div>
-            <div class="tab-content mt-5" id="tab-2">
-                <div class="content-left">
-                    <h4 class="fw-bold line-height mt-2">Empower Learning with Smart</h4>
-                    <p class="line-height mt-3">Stay ahead with an intelligent communication system that streamlines interactions between schools, parents, and staff. Automated news, circulars, and messages ensure timely updates, while real-time attendance alerts keep parents informed instantly. Multi-channel notifications via push alerts enhance engagement and ensure that no important update is missed.</p>
-                </div>
-                <div class="content-right">
-                    <img src="assets/images/Graph-2.webp" class="img-fluid" alt="">
-                </div>
-            </div>
-            <div class="tab-content mt-5" id="tab-3">
-                <div class="content-left">
-                    <h4 class="fw-bold line-height mt-2">with Smart Connectivity</h4>
-                    <p class="line-height mt-3">Stay ahead with an intelligent communication system that streamlines interactions between schools, parents, and staff. Automated news, circulars, and messages ensure timely updates, while real-time attendance alerts keep parents informed instantly. Multi-channel notifications via push alerts enhance engagement and ensure that no important update is missed.</p>
-                </div>
-                <div class="content-right">
-                    <img src="assets/images/Graph-2.webp" class="img-fluid" alt="">
-                </div>
-            </div>
-            <div class="tab-content mt-5" id="tab-4">
-                <div class="content-left">
-                    <h4 class="fw-bold line-height mt-2">Empower Learning</h4>
-                    <p class="line-height mt-3">Stay ahead with an intelligent communication system that streamlines interactions between schools, parents, and staff. Automated news, circulars, and messages ensure timely updates, while real-time attendance alerts keep parents informed instantly. Multi-channel notifications via push alerts enhance engagement and ensure that no important update is missed.</p>
-                </div>
-                <div class="content-right">
-                    <img src="assets/images/Graph-2.webp" class="img-fluid" alt="">
-                </div>
-            </div>
+          </div>
         </div>
+
+        <!-- White card containing image + details -->
+        <div class="editions-card">
+          <div class="grid">
+            <div>
+              <div class="preview" id="preview">
+                <img
+                  src="assets/images/dashboard.png"
+                  alt="Lite edition preview"
+                />
+              </div>
+            </div>
+            <div class="details">
+              <p class="best">Best For</p>
+              <h3>Basic digital starters</h3>
+              <ul>
+                <li>Real-time communication between school and parents</li>
+                <li>Circulars, announcements, and reminders</li>
+                <li>Notifications for attendance, homework, and events</li>
+                <li>Digital consent forms and acknowledgments</li>
+                <li>
+                  Daily and class-wise digital attendance with instant parent
+                  notifications
+                </li>
+                <li>Timetable and academic calendar setup</li>
+                <li>Limited role-based permissions for staff access control</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Another white bg card beneath -->
+      </div>
+
+      <div class="editions-nav">
+        <span class="quarter-text" id="tab-counter">1/4</span>
+        <i class="fas fa-arrow-left" id="prev-arrow"></i>
+        <i class="fas fa-arrow-right" id="next-arrow"></i>
+      </div>
     </section>
-    <!-- ******** Section Tab End ********** -->
 
-    <!-- ******** Section Accordion Start ******** -->
-     <section class="section-faq"
-     data-aos="fade-up"
-     data-aos-duration="1000">
-        <div class="container p-5">
-            <h4 class="fw-bold heading">Who Can Use Schoolmate?</h4>
-            <div class="row g-5">
-                <div class="col-lg-6 col-12">
-                    <!-- faq-1 -->
-                    <div class="faq-item active faq-question">
-                        <h6 class="fw-bold faq-question">What is SchoolMate, and how does it help schools?</h6>
-                        <div class="faq-answer">
-                            <p class="ms-4">
-                                SchoolMate is an all-in-one school management solution designed to enhance communication between schools, teachers, and parents while automating administrative tasks.
-                            </p>
-                        </div>
-                    </div>
 
-                    <!-- faq-2 -->
-                    <div class="faq-item faq-question">
-                        <h6 class="fw-bold faq-question">Is SchoolMate available for both web and mobile?</h6>
-                        <div class="faq-answer">
-                            <p class="ms-4">
-                                Yes, SchoolMate is accessible on both web and mobile platforms, allowing seamless management from anywhere.
-                            </p>
-                        </div>
-                    </div>
+<section class="audience-section" data-aos="fade-up"  data-aos-duration="1500">
+  <div class="left-content">
+    <h4>Who Is It For?</h4>
+    <h1>Our Audience</h1>
+    <p>Trusted by Schools of Every Kind</p>
+  </div>
+  <div class="right-content">
 
-                    <!-- faq-3 -->
-                    <div class="faq-item faq-question">
-                        <h6 class="fw-bold faq-question">Can SchoolMate be customized for our institution?</h6>
-                        <div class="faq-answer">
-                            <p class="ms-4">
-                                Absolutely! SchoolMate offers customizable solutions tailored to your institution’s needs, including role-based access and settings.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- faq-4 -->
-                    <div class="faq-item faq-question">
-                        <h6 class="fw-bold faq-question">Does SchoolMate support multiple admin roles?</h6>
-                        <div class="faq-answer">
-                            <p class="ms-4">
-                                Yes, it provides different levels of access, including Super Admin, Admin, Office Staff, and Teachers.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- faq-5 -->
-                    <div class="faq-item faq-question">
-                        <h6 class="fw-bold faq-question">How secure is the data stored in SchoolMate?</h6>
-                        <div class="faq-answer">
-                            <p class="ms-4">
-                                SchoolMate ensures top-notch security with encrypted data storage and compliance with industry standards.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- faq-6 -->
-                    <div class="faq-item faq-question">
-                        <h6 class="fw-bold faq-question">What kind of reports and analytics does SchoolMate provide?</h6>
-                        <div class="faq-answer">
-                            <p class="ms-4">
-                                It offers Automated insights, delivery status tracking, frequency data, and detailed reports for better decision-making.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- faq-7 -->
-                    <div class="faq-item faq-question">
-                        <h6 class="fw-bold faq-question">How can we request a demo of SchoolMate?</h6>
-                        <div class="faq-answer">
-                            <p class="ms-4">
-                                You can request a free demo by clicking the “Book a Free Demo” button on our website or Call us on 0123456789.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Play Schools -->
+    <div class="hover-box">
+      <div class="label">Play Schools</div>
+      <div class="info-box">
+        <ul>
+          <li>Instant attendance tracking with parent alerts</li>
+          <li>Share daily activities and updates easily</li>
+          <li>Safe, real-time communication with parents</li>
+        </ul>
+      </div>
+    </div>
 
-                <div class="col-lg-6 col-12">
-                    <div class="rectangle">
+    <!-- Private & Government Institutions -->
+    <div class="hover-box">
+      <div class="label">Private & Government Institutions</div>
+      <div class="info-box">
+        <ul>
+      <li>Centralized data for efficient administration</li>
+      <li>Streamlined communication with staff and parents</li>
+      <li>Automated reports, attendance, and exam management</li>
+    </ul>
+      </div>
+    </div>
 
-                    </div>
-                </div>
-            </div>
+    <!-- Matriculation & CBSE Boards -->
+    <div class="hover-box">
+      <div class="label">Matriculation & CBSE Boards</div>
+      <div class="info-box">
+         <ul>
+      <li>Structured syllabus & academic planning</li>
+      <li>Instant exam schedules & report cards</li>
+      <li>Smooth school-parent-teacher communication</li>
+    </ul>
+      </div>
+    </div>
+
+    <!-- Educational Trusts & Groups -->
+    <div class="hover-box">
+      <div class="label">Educational Trusts & Groups</div>
+      <div class="info-box">
+        <ul>
+      <li>Manage multiple institutions from one platform</li>
+      <li>Unified data for reporting & performance tracking</li>
+      <li>Ensure standardization across all branches</li>
+    </ul>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</section>
+  <div class="automation-page-wrapper" data-aos="fade-up"  data-aos-duration="1500">
+  <h1 class="automation-header-title">Automation at Its Best</h1>
+  <p class="automation-header-subtext">Save Time. Stay Ahead. Automate Everything.</p>
+  <p class="automation-header-subtext">
+ <span class="highlight-gradient">Save 50% of admin time with smart automation.</span>
+<!-- <span class="highlight-gradient">smart automation.</span> -->
+
+  </p>
+
+  <div class="automation-feature-grid">
+
+    <!-- Card 1 -->
+    <div class="feature-card-box">
+      <div class="feature-card-content">
+        <div class="feature-card-title">
+          <i class="fas fa-user-check"></i> Smart Attendance & Instant Alerts
         </div>
+        <p class="feature-card-description">
+          Track student attendance in real-time and send instant alerts to parents—ensuring transparency and safety every day.
+        </p>
+      </div>
+      <img class="feature-hover-image" src="assets/images/dashboard.png" alt="Attendance" />
+    </div>
 
-     </section>
-    <!-- ******** Section Accordion End ******** -->
-
-    <!-- ******* Section Slide Start ******* -->
-     <section class="section-slide"
-     data-aos="fade-up"
-     data-aos-duration="1000">
-        <div class="container p-5">
-            <h4 class="fw-bold heading text-center">Advanced Automation – Smarter Schooling</h4>
-            <p class="line-height mt-4 text-center">Leverage the power automation for smarter school management—streamlining operations, enhancing communication, and optimizing efficiency with minimal effort.</p>
-            <div class="row mt-5 mx-auto">
-                <div class="swiper SlidingSwiper">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide p-2">
-                        <div class="d-flex slide-1 gap-5 mt-2 justify-content-center">
-                            <img src="assets/images/Slide-1.webp" class="img-fluid" alt="">
-                            <h5 class="fw-bold line-height fs-3">Smart <br>
-                                Attendance <br>
-                                Tracking</h5>
-                        </div>
-                         <div class="mt-4 line-height describe text-center">
-                        <p>Effortlessly track attendance with automated alerts, real-time updates, and seamless integration—ensuring accuracy and efficiency for schools.</p>
-                    </div>
-                      </div>
-                      <div class="swiper-slide">Slide 2</div>
-                      <div class="swiper-slide">Slide 3</div>
-                      <div class="swiper-slide">Slide 4</div>
-                      <div class="swiper-slide">Slide 5</div>
-                    </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                  </div>
-            </div>
+    <!-- Card 2 -->
+    <div class="feature-card-box">
+      <div class="feature-card-content">
+        <div class="feature-card-title">
+          <i class="fas fa-chart-line"></i> Exam Result Publishing & Analytics
         </div>
-     </section>
-    <!-- ****** Section Slide End ********* -->
+        <p class="feature-card-description">
+          Publish exam results instantly and access detailed analytics to evaluate student performance, class trends, and subject-wise insights with ease.
+        </p>
+      </div>
+      <img class="feature-hover-image" src="assets/images/dashboard.png" alt="Analytics" />
+    </div>
 
-    <!-- ****** Section Testimonial Start ******* -->
-     <section class="section-testimonial"
-     data-aos="fade-up"
-     data-aos-duration="1000">
-        <div class="container p-5 text-center">
-            <h4 class="fw-bold heading">Success Stories & Testimonials</h4>
-            <p class="mt-4 line-height">See how Ara Schoolmate empowers schools with real success stories and <br> transformative experiences!</p>
-            <img src="assets/images/image (3).webp" class="img-fluid mt-4" alt="">
+    <!-- Card 3 -->
+    <div class="feature-card-box">
+      <div class="feature-card-content">
+        <div class="feature-card-title">
+          <i class="fas fa-book-open"></i> Homework Distribution
         </div>
-     </section>
-    <!-- ****** Section Testimonial End ******* -->
+        <p class="feature-card-description">
+          Easily assign and share homework with students and parents, ensuring consistent learning and clear communication beyond the classroom.
+        </p>
+      </div>
+      <img class="feature-hover-image" src="assets/images/dashboard.png" alt="Homework" />
+    </div>
 
-    <!-- ***** Section Card Start -->
-     <section class="section-card"
-     data-aos="fade-up"
-     data-aos-duration="1000">
-        <h4 class="fw-bold heading text-center">Mobile-Friendly & Parent-Centric Features</h4>
-        <div class="container mt-5">
-            <div class="row mx-auto g-5 justify-content-center align-items-center text-center">
-                <div class="swiper mySwiper d-lg-block d-none">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img src="assets/images/Illustrate-1.webp" class="img-fluid" alt="">
-                                <h6 class="fw-bold">Effortless Access, Anytime</h6>
-                                <p>Parents can easily track attendance, results, and study materials on mobile, staying connected anytime, anywhere.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img src="assets/images/Illustrate-2.webp" class="img-fluid" alt="">
-                                <h6 class="fw-bold">Real-Time Alerts, No Delays</h6>
-                                <p>Instant notifications keep parents updated on attendance, exams, and fees, ensuring they never miss important school updates.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img src="assets/images/Illustrate-3.webp" class="img-fluid" alt="">
-                                <h6 class="fw-bold">Clear Progress Insights</h6>
-                                <p>A structured dashboard provides parents with a clear view of attendance, test scores, and study resources for better support at home.</p>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <img src="assets/images/Illustrate-4.webp" class="img-fluid" alt="">
-                                <h6 class="fw-bold">Direct Teacher Interaction</h6>
-                                <p>Built-in messaging connects parents with teachers for instant updates, ensuring seamless communication and better student support.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-
-            <div class="d-lg-none d-block container mt-2">
-                <div class="row g-5 mt-3 justify-content-center align-items-center mx-auto">
-                    <div class="col-12 col-md-6">
-                        <div class="card text-center p-3">
-                            <img src="assets/images/Illustrate-1.webp" class="img-fluid" alt="">
-                            <h6 class="fw-bold">Effortless Access, Anytime</h6>
-                            <p>Parents can easily track attendance, results, and study materials on mobile, staying connected anytime, anywhere.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="card text-center p-3">
-                            <img src="assets/images/Illustrate-2.webp" class="img-fluid" alt="">
-                            <h6 class="fw-bold">Real-Time Alerts, No Delays</h6>
-                            <p>Instant notifications keep parents updated on attendance, exams, and fees, ensuring they never miss important school updates.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="card text-center p-3">
-                            <img src="assets/images/Illustrate-1.webp" class="img-fluid" alt="">
-                            <h6 class="fw-bold">Effortless Access, Anytime</h6>
-                            <p>Parents can easily track attendance, results, and study materials on mobile, staying connected anytime, anywhere.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                        <div class="card text-center p-3">
-                            <img src="assets/images/Illustrate-4.webp" class="img-fluid" alt="">
-                            <h6 class="fw-bold">Direct Teacher Interaction</h6>
-                            <p>Built-in messaging connects parents with teachers for instant updates, ensuring seamless communication and better student support.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+    <!-- Card 4 -->
+    <div class="feature-card-box">
+      <div class="feature-card-content">
+        <div class="feature-card-title">
+          <i class="fas fa-bell"></i> Real-Time Irregularity Notifications
         </div>
-     </section>
-    <!-- ***** Section Card End ****** -->
+        <p class="feature-card-description">
+          Get real-time alerts on student irregularities like absences or late arrivals—keeping parents and school staff informed instantly.
+        </p>
+      </div>
+      <img class="feature-hover-image" src="assets/images/dashboard.png" alt="Irregularities" />
+    </div>
 
+    <!-- Card 5 -->
+    <div class="feature-card-box feature-card-purple">
+      <div class="feature-card-content">
+        <div class="feature-card-title">
+          <i class="fas fa-file-alt"></i> Auto Reports & Academic Overviews
+        </div>
+        <p class="feature-card-description">
+          Generate automated reports and academic overviews to monitor student progress and simplify performance tracking.
+        </p>
+      </div>
+      <img class="feature-hover-image" src="assets/images/dashboard.png" alt="Reports" />
+    </div>
 
-    <!-- ****** Section Portal Start ********  -->
-    <section class="section-portal"
+    <!-- Card 6 -->
+    <div class="feature-card-box">
+      <div class="feature-card-content">
+        <div class="feature-card-title">
+          <i class="fas fa-envelope-open-text"></i> Customizable Parent Notifications
+        </div>
+        <p class="feature-card-description">
+          Send tailored notifications to parents about attendance, homework, exams, and more—keeping them informed at every step.
+        </p>
+      </div>
+      <img class="feature-hover-image" src="assets/images/dashboard.png" alt="Notifications" />
+    </div>
+
+  </div>
+</div>
+
+<section class="mfus-section" data-aos="fade-up"  data-aos-duration="1500">
+    <h2 class="mfus-heading">Mobile-First. User-Focused.</h2>
+    <p class="mfus-subheading">Built for Everyone – From Principals to Parents</p>
+
+    <div class="mfus-tags">
+      <div class="mfus-tag"><span class="mfus-dot"></span> Instant Parent Notifications</div>
+      <div class="mfus-tag purple-text"><span class="mfus-dot"></span> Role-Based Staff Login Panel</div>
+      <div class="mfus-tag"><span class="mfus-dot"></span> Mobile Homework Upload</div>
+      <div class="mfus-tag"><span class="mfus-dot"></span> All-in-One Dashboard</div>
+      <div class="mfus-tag"><span class="mfus-dot"></span> Optional Biometric/Hardware Integration</div>
+    </div>
+  </section>
+
+   <section class="section-portal"
     data-aos="fade-up"
      data-aos-duration="1000">
         <h4 class="text-center fw-bold heading">A Staff-Friendly Portal</h4>
@@ -415,70 +474,168 @@
             </div>
         </div>
     </section>
-    <!-- ***** Section Portal End ******* -->
+
+<section class="faq-oracle-drift">
+  <h2 class="faq-title">FAQ’s</h2>
+
+  <div class="faq-item">
+    <div class="faq-question">What is SchoolMate and who is it for?</div>
+    <div class="faq-answer">
+      SchoolMate is a comprehensive school management and parent communication platform designed for administrators, teachers, and parents to manage academics, attendance, reports, and more — all in one place.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">Is SchoolMate available for both web and mobile?</div>
+    <div class="faq-answer">
+      Yes. SchoolMate can be accessed via a web portal and a mobile app available on both Android and iOS devices.
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question">What key features does SchoolMate offer?</div>
+    <div class="faq-answer">
+      <ul class="feature-list">
+  <li>Attendance Management</li>
+  <li>Marks & Results</li>
+  <li>Study Material Sharing</li>
+  <li>Exam Timetable</li>
+  <li>Notifications & Alerts</li>
+  <li>Student Performance Reports</li>
+  <li>Parent-Teacher Communication</li>
+  <li>More..</li>
+</ul>
+    </div>
+    </div>
+
+  <div class="faq-item">
+    <div class="faq-question">How secure is my school’s data on SchoolMate?</div>
+    <div class="faq-answer">
+      SchoolMate uses end-to-end encryption, secure cloud hosting, and regular backups to ensure your school’s data is protected and private
+    </div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-question">Can parents track their child’s performance and attendance?</div>
+    <div class="faq-answer">
+     Yes. Parents receive real-time updates on attendance, marks, exam schedules, homework, and school announcements via the app.
+    </div>
+  </div>
+    <div class="faq-item">
+    <div class="faq-question">How easy is it for teachers to update attendance and marks?</div>
+    <div class="faq-answer">
+     Extremely easy. Teachers can log in from their mobile or computer, update daily attendance, enter marks, and upload materials in just a few clicks
+    </div>
+  </div>
+      <div class="faq-item">
+    <div class="faq-question">Can SchoolMate be customized for our school’s needs?</div>
+    <div class="faq-answer">
+     Yes. SchoolMate offers modular customization to suit your school’s structure, branding, and academic workflows
+    </div>
+  </div>
+      <div class="faq-item">
+    <div class="faq-question">Does SchoolMate support multi-branch or group schools?</div>
+    <div class="faq-answer">
+     Yes. SchoolMate is built to handle multi-branch institutions with centralized monitoring and individual branch access.
+    </div>
+  </div>
+        <div class="faq-item">
+    <div class="faq-question">How long does it take to implement SchoolMate in our school?</div>
+    <div class="faq-answer">
+      Full setup and training typically take 7–10 working days, depending on the size and requirements of the school.
+    </div>
+  </div>
+          <div class="faq-item">
+    <div class="faq-question">What kind of support and training do you provide?</div>
+    <div class="faq-answer">
+      We provide comprehensive onboarding, staff training, and ongoing support via phone, email, and WhatsApp.
+    </div>
+  </div>
+
+  </div>
+
+  </div>
 
 
-    <!-- ****** Section Summary Start ****** -->
-    <section class="section-summary">
-        <div class="container p-5 text-center mt-3">
-            <h4 class="heading fw-bold">Choose SchoolMate. Accelerate School Growth.</h4>
-            <p class="mt-4 fw-semibold line-height">Choose SchoolMate for smarter school management—streamline operations, enhance communication, <br>
-                and drive academic success effortlessly!</p>
-                <button class="btn-demo mt-3"><a href="" class="p-2 text-light">Book a free Demo</a></button>
-        </div>
-     </section>
-    <!-- ******* Section Summary End -->
+  <!-- Add more .faq-item blocks as needed -->
+</section>
+
+
+
+        <section class="home-cta-section">
+      <div class="cta-content">
+        <h2>Begin Your SchoolMate Journey Today</h2>
+        <p>
+          Get a free live demo, customized pricing, and expert onboarding
+          <strong></strong>.<br />
+
+        </p>
+         <button class="btn-demo mt-3"><a style="color: white !important;"  href="" class="p-2">Book a free Demo</a></button>
+      </div>
+    </section>
 
     <!-- ****** Section Footer Start ****** -->
-     <footer>
-        <div class="container p-5">
-            <div class="row mx-auto g-5 justify-content-center">
-                <div class="col-lg-2 col-12 col-md-6">
-                    <h5>About Us</h5>
-                    <a href="">Brief overview</a> <br>
-                    <a href="">Mission & Vision</a>
-                </div>
-                <div class="col-lg-2 col-12 col-md-6">
-                    <h5>Quick Links</h5>
-                    <a href="">Home</a> <br>
-                    <a href="">Features</a> <br>
-                    <a href="">Pricing</a> <br>
-                    <a href="">Contact</a>
-                </div>
-                <div class="col-lg-2 col-12 col-md-6">
-                    <h5>Support</h5>
-                    <a href="">Help Center</a> <br>
-                    <a href="">FAQs</a> <br>
-                    <a href="">User Guides</a>
-                </div>
-                <div class="col-lg-2 col-12 col-md-6">
-                    <h5>Legel</h5>
-                    <a href="">Privacy Policy</a> <br>
-                    <a href="">Terms & Conditions</a>
-                </div>
-                <div class="col-lg-2 col-12 col-md-6">
-                    <h5>Contact Us</h5>
-                    <a href="">Email</a> <br>
-                    <a href="">Phone</a> <br>
-                    <a href="">Address</a>
-                </div>
-            </div>
-            <div class="mt-4 d-flex gap-4 justify-content-center align-items-center">
-                <p class="mt-3">Follow Us on:</p>
-                <a href=""><img src="assets/images/Instagram.webp" class="img-fluid" alt="" srcset=""></a>
-                <a href=""><img src="assets/images/X.webp" class="img-fluid" alt=""></a>
-                <a href=""><img src="assets/images/Facebook.webp" class="img-fluid" alt=""></a>
-                <a href=""><img src="assets/images/Youtube.webp" class="img-fluid" alt=""></a>
-            </div>
+    <footer>
+      <div class="container p-5">
+        <div class="row mx-auto g-5 justify-content-center">
+          <div class="col-lg-2 col-12 col-md-6">
+            <h5>About Us</h5>
+            <a href="">Brief overview</a> <br />
+            <a href="">Mission & Vision</a>
+          </div>
+          <div class="col-lg-2 col-12 col-md-6">
+            <h5>Quick Links</h5>
+            <a href="">Home</a> <br />
+            <a href="">Features</a> <br />
+            <a href="">Pricing</a> <br />
+            <a href="">Contact</a>
+          </div>
+          <div class="col-lg-2 col-12 col-md-6">
+            <h5>Support</h5>
+            <a href="">Help Center</a> <br />
+            <a href="">FAQs</a> <br />
+            <a href="">User Guides</a>
+          </div>
+          <div class="col-lg-2 col-12 col-md-6">
+            <h5>Legel</h5>
+            <a href="">Privacy Policy</a> <br />
+            <a href="">Terms & Conditions</a>
+          </div>
+          <div class="col-lg-2 col-12 col-md-6">
+            <h5>Contact Us</h5>
+            <a href="">Email</a> <br />
+            <a href="">Phone</a> <br />
+            <a href="">Address</a>
+          </div>
         </div>
-        <div class="d-flex justify-content-center copyright">
-            <p class="mt-3 text-center">© 2025, ARA Discover Technologies Pvt. Ltd. | Preserving Innovation.</p>
+        <div
+          class="mt-4 d-flex gap-4 justify-content-center align-items-center"
+        >
+          <p class="mt-3">Follow Us on:</p>
+          <a href=""
+            ><img
+              src="assets/images/Instagram.webp"
+              class="img-fluid"
+              alt=""
+              srcset=""
+          /></a>
+          <a href=""
+            ><img src="assets/images/X.webp" class="img-fluid" alt=""
+          /></a>
+          <a href=""
+            ><img src="assets/images/Facebook.webp" class="img-fluid" alt=""
+          /></a>
+          <a href=""
+            ><img src="assets/images/Youtube.webp" class="img-fluid" alt=""
+          /></a>
         </div>
-     </footer>
+      </div>
+      <div class="d-flex justify-content-center copyright">
+        <p class="mt-3 text-center">
+          Built With ❤️ by ARA Discover Technologies
+        </p>
+      </div>
+    </footer>
     <!-- ****** Section Footer End ****** -->
-
-
-
 
     <!-- ******** JS File ******* -->
     <script src="assets/js/script.js"></script>
@@ -492,70 +649,249 @@
     <!-- **** AOS *** -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init();
+      AOS.init();
     </script>
 
+    <!-- JavaScript -->
+<script>
+ window.addEventListener("scroll", function () {
+  const section = document.querySelector(".section-unique-hero");
+  if (!section) return; // 💪 Safe exit if element doesn't exist
+
+  if (window.scrollY > 50) {
+    section.classList.add("scrolled");
+  } else {
+    section.classList.remove("scrolled");
+  }
+});
+
+</script>
+
+
+
+
+    <script>
+      const tiers = document.querySelectorAll(".tiers button");
+      const h3 = document.querySelector(".details h3");
+      const best = document.querySelector(".details .best");
+      const ul = document.querySelector(".details ul");
+      const tabCounter = document.getElementById("tab-counter");
+      const tiersButtons = [...document.querySelectorAll(".tiers button")];
+      const prevArrow = document.getElementById("prev-arrow");
+      const nextArrow = document.getElementById("next-arrow");
+const editionsSection = document.getElementById("editions-section");
+
+      const dataMap = {
+        Lite: {
+          color: "#1A7F37",
+          bgColor: "rgba(26, 127, 55, 0.1)",
+          best: "Best For",
+          h3: "Basic digital starters",
+          features: [
+            "Real-time communication between school and parents",
+            "Circulars, announcements, and reminders",
+            "Notifications for attendance, homework, and events",
+            "Digital consent forms and acknowledgments",
+            "Daily and class-wise digital attendance with instant parent notifications",
+            "Timetable and academic calendar setup",
+            "Limited role-based permissions for staff access control",
+          ],
+        },
+        Pro: {
+          color: "#E50000",
+
+           bgColor: "rgba(229, 0, 0, 0.1)",
+          best: "Best For",
+          h3: "Advanced academic management",
+          features: [
+            "Student and staff profile management",
+            "Online fee collection with automated reminders",
+            "Internal document management system",
+            "Advanced role-based permissions and approval workflows",
+            "Stock and inventory management",
+            "Order tracking for uniforms, stationery, and supplies",
+            "Simple book distribution tracking for students and staff",
+          ],
+        },
+        Plus: {
+          color: "#005EBB",
+           bgColor: "rgba(0, 94, 187, 0.1)",
+          best: "Best For",
+          h3: "Comprehensive digital solutions",
+          features: [
+            "GPS-based live bus tracking",
+            "Pickup/drop-off alerts for parents",
+            "Transport-linked attendance",
+            "Route planning and staff/bus assignments",
+            "Transport reports and emergency alerts",
+          ],
+        },
+        360: {
+          color: "#5A00B5",
+          bgColor: "rgba(90, 0, 181, 0.1)",
+          best: "Best For",
+          h3: "360° institutional transformation",
+          features: [
+            "Exam planner and online mark entry",
+            "Auto-generated report cards",
+            "Homework tracking and submission updates",
+            "Syllabus coverage and lesson progress monitoring",
+            "Performance dashboards and academic analytics",
+            "Daily task management for staff",
+            "Teachers work completion tracker",
+            "Personalized to-do list for efficient planning",
+          ],
+        },
+      };
+
+      tiers.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          // Remove active classes and reset styles
+          tiers.forEach((b) => {
+            b.classList.remove("active");
+            b.style.backgroundColor = "";
+            b.style.color = "";
+          });
+
+          const edition = btn.textContent.trim();
+          const data = dataMap[edition];
+
+          if (data) {
+            // Add active styling
+            btn.classList.add("active");
+            btn.style.backgroundColor = data.color;
+            btn.style.color = "#fff";
+
+            // Update content
+            h3.textContent = data.h3;
+            h3.style.color = data.color;
+            best.textContent = data.best;
+            ul.innerHTML = data.features.map((f) => `<li>${f}</li>`).join("");
+
+            // 💥 Update counter text like "2/4"
+            tabCounter.textContent = `${index + 1}/${tiers.length}`;
+            editionsSection.style.backgroundColor = data.bgColor;
+          }
+        });
+      });
+
+      // On page load: set correct counter (if one is already active)
+      const activeIndex = [...tiers].findIndex((btn) =>
+        btn.classList.contains("active")
+      );
+      if (activeIndex !== -1 && tabCounter) {
+        tabCounter.textContent = `${activeIndex + 1}/${tiers.length}`;
+      }
+
+      let currentIndex = tiersButtons.findIndex((btn) =>
+        btn.classList.contains("active")
+      );
+
+      // If no active tab, default to the first one
+      if (currentIndex === -1) {
+        currentIndex = 0;
+        tiersButtons[currentIndex].click();
+      }
+
+      function updateTab(index) {
+        if (index < 0) index = tiersButtons.length - 1;
+        if (index >= tiersButtons.length) index = 0;
+
+        currentIndex = index;
+        tiersButtons[currentIndex].click();
+      }
+
+      prevArrow.addEventListener("click", () => {
+        updateTab(currentIndex - 1);
+      });
+
+      nextArrow.addEventListener("click", () => {
+        updateTab(currentIndex + 1);
+      });
+
+      // Optional: initialize the counter on page load
+      tabCounter.textContent = `${currentIndex + 1}/${tiersButtons.length}`;
+    </script>
+
+    <script>
+      const tiersEl = document.getElementById("tiers");
+      const previewImg = document.querySelector("#preview img");
+      const srcMap = {
+        Lite: "assets/images/dashboard.png",
+        Pro: "assets/images/dashboard.png",
+        Plus: "assets/images/dashboard.png",
+        360: "assets/images/dashboard.png",
+      };
+
+      tiersEl.addEventListener("click", (e) => {
+        if (e.target.tagName === "BUTTON") {
+          document
+            .querySelectorAll("#tiers button")
+            .forEach((btn) => btn.classList.remove("active"));
+          e.target.classList.add("active");
+          const tier = e.target.textContent;
+          previewImg.src = srcMap[tier];
+          previewImg.alt = `${tier} edition preview`;
+        }
+      });
+    </script>
     <!-- Card Slider -->
     <script>
-        var swiper = new Swiper(".mySwiper", {
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3.5,
+        spaceBetween: 40,
+        grabCursor: true,
+        loop: false,
+        // autoplay: {
+        //     delay: 3000,
+        //     disableOnInteraction: false,  // Keeps autoplay running after interaction
+        //     pauseOnMouseEnter: true,
+        // },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1025: {
             slidesPerView: 3.5,
-            spaceBetween: 40,
-            grabCursor: true,
-            loop: false,
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false,  // Keeps autoplay running after interaction
-            //     pauseOnMouseEnter: true,
-            // },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 2,
-                },
-                1025: {
-                    slidesPerView: 3.5,
-                }
-            }
-        });
+          },
+        },
+      });
     </script>
 
-
-<!-- Sliders  -->
-<script>
-    var swiper = new Swiper(".SlidingSwiper", {
-     slidesPerView: 1,
-     spaceBetween: 10,
-     loop: true,
-     navigation: {
-         nextEl: ".swiper-button-next",
-         prevEl: ".swiper-button-prev",
+    <!-- Sliders  -->
+    <script>
+      var swiper = new Swiper(".SlidingSwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
-     });
-</script>
+      });
+    </script>
 
-<script>
+    <script>
+      // Graph image animation
 
+      document.addEventListener("DOMContentLoaded", function () {
+        const graph = document.querySelector(".graph");
 
-// Graph image animation
+        window.addEventListener("scroll", function () {
+          let scrollY = window.scrollY;
+          let triggerPoint = window.innerHeight * 0.2;
 
-document.addEventListener("DOMContentLoaded", function() {
-    const graph = document.querySelector(".graph");
-
-    window.addEventListener("scroll", function() {
-        let scrollY = window.scrollY;
-        let triggerPoint = window.innerHeight * 0.2;
-
-        if (scrollY > triggerPoint) {
+          if (scrollY > triggerPoint) {
             graph.classList.add("scrolled");
-        } else {
+          } else {
             graph.classList.remove("scrolled");
-        }
-    });
-});
-</script>
-
-</body>
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

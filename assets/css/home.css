@@ -2004,7 +2004,7 @@ font-weight: 600;
 }
 
 .download-btn-default {
-  background: #000;
+  background: #000 !important;
   color: white;
   border: none;
   padding: 12px 25px;
