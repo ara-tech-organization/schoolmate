@@ -13,7 +13,7 @@
     <!-- ******** Link CSS ******* -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <!-- ******* Icon  ********-->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -35,28 +35,32 @@
   <body>
     <!-- ******** Header Start ******* -->
     <header>
-      <nav class="container-fluid p-3 navbar">
+      <nav style="background-color: #fff;" class="container-fluid p-3 navbar">
         <div class="container nav-wrapper">
           <div class="nav-logo">
-            <a href="index.html">
+            <a href="home.html">
               <img src="assets/images/Logo.webp" class="img-fluid" alt="Logo" />
             </a>
           </div>
 
           <ul class="nav-links">
-            <li><a href="home.html" class="nav-item">Home</a></li>
-            <li><a href="automation.html" class="nav-item">Automation</a></li>
-            <li><a href="Product.html" class="nav-item">Product Tour</a></li>
-            <li><a href="about.html" class="nav-item">About Us</a></li>
+            <li><a href="home.html" class="nav-item home">Home</a></li>
+            <li><a href="automation3.html" class="nav-item">Automation</a></li>
+            <li>
+              <a href="Product.html" class="nav-item active">Product Tour</a>
+            </li>
+            <li><a href="about2.html" class="nav-item">About Us</a></li>
             <li><a href="contact2.html" class="nav-item">Contact Us</a></li>
             <li class="download-mobile">
-              <a href="#" class="btn-demo">Download Broucher</a>
+              <a href="Broucher.html" class="btn-demo">Download Broucher</a>
             </li>
           </ul>
 
           <div class="nav-side">
             <!-- Visible only on desktop -->
-            <a href="#" class="btn-demo download-desktop">Download Broucher</a>
+            <a href="Broucher.html" class="btn-demo download-desktop"
+              >Download Broucher</a
+            >
 
             <div class="responsive-menus">
               <i class="fa-solid fa-bars" id="menuToggle"></i>
@@ -204,7 +208,7 @@
             </div>
             <!-- Booking form icon -->
             <h3>Fill out the booking form below</h3>
-            <div class="arrow"><i class="fa-solid fa-caret-down"></i></div>
+            <div class="arrow"><i class="fa-solid fa-chevron-down"></i></div>
           </div>
           <div class="card-content">
             <p>
@@ -220,7 +224,7 @@
             </div>
             <!-- Date and time icon -->
             <h3>Choose your preferred date and time</h3>
-            <div class="arrow"><i class="fa-solid fa-caret-down"></i></div>
+            <div class="arrow"><i class="fa-solid fa-chevron-down"></i></div>
           </div>
           <div class="card-content">
             <p>Select a slot that fits your schedule best.</p>
@@ -231,7 +235,7 @@
             <div class="hiw-icon"><i class="fa-solid fa-video"></i></div>
             <!-- Video meeting icon -->
             <h3>Join a 1:1 live Zoom/Google Meet session</h3>
-            <div class="arrow"><i class="fa-solid fa-caret-down"></i></div>
+            <div class="arrow"><i class="fa-solid fa-chevron-down"></i></div>
           </div>
           <div class="card-content">
             <p>Connect face-to-face with our product specialist instantly.</p>
@@ -244,7 +248,7 @@
             </div>
             <!-- Questions icon -->
             <h3>Get your questions answered live</h3>
-            <div class="arrow"><i class="fa-solid fa-caret-down"></i></div>
+            <div class="arrow"><i class="fa-solid fa-chevron-down"></i></div>
           </div>
           <div class="card-content">
             <p>
@@ -257,7 +261,7 @@
             <div class="hiw-icon"><i class="fa-solid fa-thumbs-up"></i></div>
             <!-- Decision icon -->
             <h3>No obligations — just explore and decide!</h3>
-            <div class="arrow"><i class="fa-solid fa-caret-down"></i></div>
+            <div class="arrow"><i class="fa-solid fa-chevron-down"></i></div>
           </div>
           <div class="card-content">
             <p>Zero pressure. Take your time and see if we’re a fit.</p>
@@ -276,7 +280,7 @@
           class="youtube-thumbnail"
         >
           <img
-            src="/assets/images/image (3).webp"
+            src="assets/images/image (3).webp"
             alt="YouTube Demo Preview"
             class="youtube-image"
           />
@@ -287,56 +291,47 @@
 
     <section class="demo-booking-wrapper">
       <!-- RIGHT SIDE: Booking Form -->
-      <div class="demo-form-right">
-        <h3 class="mb-4">Book Your Demo</h3>
-        <form class="demo-form row g-3">
-          <div class="col-md-6">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Full Name"
-              required
-            />
-          </div>
-          <div class="col-md-6">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="School/Institution Name"
-              required
-            />
-          </div>
-          <div class="col-md-6">
-            <input
-              type="email"
-              class="form-control"
-              placeholder="Email ID"
-              required
-            />
-          </div>
-          <div class="col-md-6">
-            <input
-              type="tel"
-              class="form-control"
-              placeholder="Phone Number"
-              required
-            />
-          </div>
-          <div class="col-md-6">
-            <input type="datetime-local" id="dateInput" class="form-control" />
-            <label for="dateInput" class="date-placeholder">dd-mm-yy</label>
-          </div>
-          <div class="col-md-12">
-            <textarea
-              class="form-control"
-              rows="3"
-              placeholder="Additional Message/Requirement (optional)"
-            ></textarea>
-          </div>
-          <div class="col-12 text-center">
-            <button type="submit" class="btn-demo px-5 py-2">
-              Book My Free Demo Now
-            </button>
+      <div id="formMessage" class="demo-form-clean">
+        <h3 class="gradient-heading">Get Your Free<br />Brochure Instantly!</h3>
+        <form id="brochureForm"  class="demo-form">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Full Name*"
+            required
+          />
+          <input
+            type="tel"
+            class="form-control"
+            placeholder="Mobile Number*"
+            required
+          />
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email Address*"
+            required
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="School/Institution Name*"
+            required
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="School/Institution Address*"
+            required
+          />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="City*"
+            required
+          />
+          <div class="text-center">
+            <button type="submit" class="btn-demo">Get Brochure</button>
           </div>
         </form>
       </div>
@@ -388,7 +383,11 @@
           </div>
           <div class="col-lg-2 col-12 col-md-6">
             <h5>Legel</h5>
-            <a href="">Privacy Policy</a> <br />
+            <a
+              href="https://workdrive.zohopublic.in/writer/open/ekdik37a23aec330f4c4fab0106cce6ae16a4"
+              target="_blank"
+              >Privacy Policy</a
+            ><br />
             <a href="">Terms & Conditions</a>
           </div>
           <div class="col-lg-2 col-12 col-md-6">
@@ -434,6 +433,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         AOS.init({
@@ -443,6 +443,70 @@
         });
       });
     </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("brochureForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        fullName: form.querySelector('input[placeholder*="Full Name"]').value.trim(),
+        mobile: form.querySelector('input[type="tel"]').value.trim(),
+        email: form.querySelector('input[type="email"]').value.trim(),
+        schoolName: form.querySelector('input[placeholder*="School/Institution Name"]').value.trim(),
+        schoolAddress: form.querySelector('input[placeholder*="School/Institution Address"]').value.trim(),
+        city: form.querySelector('input[placeholder*="City"]').value.trim(),
+      };
+
+      console.log("Sending data to API:", data); // ✅ This still logs your data
+
+      try {
+        const res = await fetch(
+          "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/schoolMateEnquiry",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Bearer 123",
+            },
+            body: JSON.stringify(data),
+          }
+        );
+
+        const json = await res.json();
+
+        if (!res.ok || json.error) {
+          throw new Error(json.message || "Something went wrong");
+        }
+
+        // 🎉 SUCCESS TOAST
+        Toastify({
+          text: json.message,
+          duration: 4000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        }).showToast();
+
+        form.reset(); // Optional: Reset form if needed
+
+      } catch (err) {
+        // 💀 ERROR TOAST
+        Toastify({
+          text: "❌ " + err.message,
+          duration: 5000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+        }).showToast();
+      }
+    });
+  });
+</script>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const menuToggle = document.getElementById("menuToggle");

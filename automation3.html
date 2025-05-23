@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schoolmate</title>
+    <link
+      rel="shortcut icon"
+      href="assets/images/Favicon.webp"
+      type="image/x-icon"
+    />
+
+    <!-- ******** Link CSS ******* -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- ******* Icon  ********-->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ******** Bootstrap ********** -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- ***** AOS ***** -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #fffaf7;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    .main-section {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(251, 243, 232, 0.5) 100%
+      );
+      padding: 80px 10% 0;
+    }
+
+    /* === Left Side === */
+    .left-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .left-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    .features {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+    }
+
+    .features span {
+      padding: 6px 14px 6px 24px;
+      font-size: 0.8rem;
+      border-radius: 18px;
+      font-weight: 500;
+      position: relative;
+      cursor: pointer;
+
+      background-color: #e0e0e0; /* Light grey background */
+      color: #757575; /* Medium grey text */
+      transition: all 0.3s ease;
+    }
+
+    .features span::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #9e9e9e; /* Grey dot */
+      transition: background-color 1s ease;
+    }
+
+    /* Hover state styles */
+    .feature1:hover {
+      background-color: #ffaa221a;
+      color: #ff8800;
+    }
+    .feature1:hover::before {
+      background-color: #ff8800;
+    }
+
+    .feature2:hover {
+      background-color: #ff51761a;
+      color: #ff5176;
+    }
+    .feature2:hover::before {
+      background-color: #ff5176;
+    }
+
+    .feature3:hover {
+      background-color: #5f4eed1a;
+      color: #5f4eed;
+    }
+    .feature3:hover::before {
+      background-color: #5f4eed;
+    }
+
+    /* === Right Image === */
+    .right-image {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      min-width: 300px;
+      margin-right: -10vw;
+      margin-bottom: -40px;
+      z-index: 2;
+    }
+
+    .right-image img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px 0 0 0;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+
+    /* ===== BREAKPOINTS ===== */
+
+    /* <576px (XS) */
+    @media (max-width: 575.98px) {
+      .main-section {
+        flex-direction: column;
+        padding: 40px 5%;
+      }
+
+      .left-content h1 {
+        font-size: 2rem;
+      }
+
+      .right-image {
+        justify-content: center;
+        margin: 20px 0 0;
+      }
+
+      .right-image img {
+        max-width: 100%;
+        border-radius: 12px;
+      }
+
+      .features {
+        justify-content: center;
+      }
+    }
+
+    /* 576px–767.98px (SM) */
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .main-section {
+        flex-direction: column;
+        padding: 50px 6%;
+      }
+
+      .left-content h1 {
+        font-size: 2.2rem;
+      }
+
+      .right-image {
+        justify-content: center;
+        margin: 30px 0 0;
+      }
+    }
+
+    /* 768px–991.98px (MD) */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .main-section {
+        flex-direction: row;
+        padding: 60px 7%;
+      }
+
+      .left-content h1 {
+        font-size: 2.4rem;
+      }
+
+      .right-image {
+        margin-right: -5vw;
+      }
+
+      .right-image img {
+        max-width: 500px;
+      }
+    }
+
+    /* 992px–1199.98px (LG) */
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      .main-section {
+        flex-direction: row;
+        padding: 70px 8%;
+      }
+
+      .right-image img {
+        max-width: 550px;
+      }
+    }
+
+    /* 1200px–1399.98px (XL) */
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+      .main-section {
+        padding: 80px 10% 0;
+      }
+
+      .right-image img {
+        max-width: 580px;
+      }
+    }
+
+    /* ≥1400px (XXL) */
+    @media (min-width: 1400px) {
+      .main-section {
+        padding: 90px 120px 0 120px;
+      }
+
+      .right-image img {
+        max-width: 600px;
+      }
+    }
+
+    /* ----------------------------Communication starts---------------------------------------- */
+    .automation-wrapper {
+      padding: 60px 10%;
+      background: #fff;
+      margin-top: 40px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .section-heading p {
+      font-size: 1.1rem;
+      color: #555;
+      margin-top: 8px;
+    }
+
+    .automation-container {
+      background: linear-gradient(
+        180deg,
+        rgba(223, 121, 37, 0.02) 67.91%,
+        rgba(250, 250, 250, 0.02) 114.67%
+      );
+      /* background-color: rebeccapurple; */
+      border-radius: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px;
+      position: relative;
+      overflow: visible;
+    }
+
+    .automation-left {
+      flex: 1 1 50%;
+      margin-top: 30px;
+      /* padding-right: 20px; */
+    }
+
+    .automation-left h3 {
+      background: linear-gradient(90deg, #df7925 42.79%, #794214 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .automation-left h4 {
+      color: #df7925;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .automation-left ul {
+      list-style: disc !important;
+      font-weight: 600;
+      line-height: 30px;
+      color: #333;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      padding-left: 0 !important;
+    }
+
+    .imp-note {
+      background: linear-gradient(
+        90deg,
+        rgba(223, 121, 37, 0.05) 42.79%,
+        rgba(121, 66, 20, 0.05) 100%
+      );
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      color: #333;
+      max-width: 90%;
+      text-align: center;
+      margin-top: 100px;
+      font-weight: bold;
+    }
+
+    .automation-right {
+      flex: 1 1 45%;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding: 0;
+      margin: 0;
+      overflow: visible;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      margin-right: -40px;
+      margin-bottom: -40px;
+    }
+
+    .carousel-img {
+      width: 100%;
+      /* height: 500px; */
+      display: none;
+      transition: box-shadow 0.6s ease, transform 0.6s ease;
+      border-radius: 12px;
+    }
+
+    .carousel-img.active {
+      display: block;
+    }
+
+    .carousel:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+
+    .carousel-toggle {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      width: 20px;
+      height: 5px;
+      background-color: #ddd;
+      border-radius: 30px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+
+    .toggle-knob {
+      width: 10px;
+      height: 5px;
+      background-color: #000;
+      border-radius: 50%;
+      position: absolute;
+      left: 2px;
+      top: 0;
+      transition: left 0.3s ease;
+    }
+
+    .carousel-toggle.active .toggle-knob {
+      left: 8px;
+    }
+
+    /* Responsive Media Queries */
+    @media (max-width: 575px) {
+      .automation-container {
+        flex-direction: column;
+        padding: 30px 10px;
+      }
+
+      .automation-left {
+        padding-right: 0;
+        text-align: left;
+      }
+
+      .automation-right {
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .carousel {
+        margin: 0;
+      }
+
+      .imp-note {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px),
+      (min-width: 768px) and (max-width: 991px),
+      (min-width: 992px) and (max-width: 1199px) {
+      .automation-container {
+        flex-direction: column;
+      }
+
+      .automation-right {
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .carousel {
+        margin: 0;
+      }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1399px), (min-width: 1400px) {
+      .automation-right {
+        justify-content: flex-end;
+      }
+
+      .carousel {
+        margin-right: -40px;
+        margin-bottom: -40px;
+      }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .carousel {
+        max-width: 95%;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .carousel {
+        max-width: 600px;
+      }
+    }
+    /* ---------------------------Communication ends---------------------------------- */
+
+    /* ----------------------------ERP Starts  ------------------------------------------*/
+    .auto-wrapper {
+      padding: 60px 10%;
+      background: #fff;
+    }
+
+    .auto-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px;
+      background: linear-gradient(
+        89.98deg,
+        rgba(171, 81, 205, 0.02) 1.13%,
+        rgba(97, 41, 174, 0.02) 99.98%
+      );
+      border-radius: 20px;
+      overflow: visible;
+    }
+
+    .auto-left {
+      flex: 1 1 45%;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 0;
+    }
+
+    .auto-carousel {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin-left: -40px;
+      margin-bottom: -40px;
+      transition: opacity 1s ease-in-out, visibility 1s ease-in-out,
+        box-shadow 0.5s ease;
+    }
+
+    .auto-carousel:hover {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      transform: scale(1.02);
+      cursor: pointer;
+    }
+
+    .auto-carousel-img {
+      width: 100%;
+      display: none;
+      transition: opacity 0.6s ease-in-out;
+      border-radius: 12px;
+    }
+
+    .auto-carousel-img.active {
+      display: block;
+    }
+
+    .auto-carousel-toggle {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      width: 20px;
+      height: 5px;
+      background-color: #ddd;
+      border-radius: 30px;
+      cursor: pointer;
+      z-index: 10;
+      transition: background 0.3s ease;
+    }
+
+    .auto-carousel-toggle .toggle-knob {
+      width: 10px;
+      height: 5px;
+      background-color: #000;
+      border-radius: 50%;
+      position: absolute;
+      left: 2px;
+      top: 0;
+      transition: left 0.3s ease;
+    }
+
+    .auto-carousel-toggle.active .toggle-knob {
+      left: 8px;
+    }
+
+    .auto-right {
+      flex: 1 1 55%;
+      padding-left: 30px;
+      margin-top: 30px;
+    }
+
+    .auto-right h3 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      background: linear-gradient(89.98deg, #ab51cd 1.13%, #6129ae 99.98%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .auto-right h4 {
+      color: #7433b6;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .auto-right ul {
+      list-style: disc;
+      font-weight: 600;
+      line-height: 30px;
+      color: #333;
+      font-size: 1rem;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+
+    .auto-note {
+      background: linear-gradient(
+        90deg,
+        rgba(223, 121, 37, 0.05) 42.79%,
+        rgba(121, 66, 20, 0.05) 100%
+      );
+      padding: 15px 20px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      color: #333;
+      max-width: 90%;
+      font-weight: bold;
+      margin-top: 100px;
+      text-align: center;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 575px) {
+      .auto-container {
+        flex-direction: column-reverse;
+        padding: 30px 10px;
+      }
+
+      .auto-left {
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .auto-carousel {
+        margin: 0;
+        max-width: 100%;
+      }
+
+      .auto-right {
+        padding-left: 0;
+        text-align: left;
+      }
+
+      .auto-note {
+        max-width: 100%;
+      }
+    }
+
+    @media (min-width: 576px) and (max-width: 1199px) {
+      .auto-container {
+        flex-direction: column-reverse;
+      }
+
+      .auto-left {
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+
+      .auto-carousel {
+        margin: 0;
+        max-width: 100%;
+      }
+
+      .auto-right {
+        padding-left: 0;
+        text-align: left;
+      }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1399px), (min-width: 1400px) {
+      .auto-left {
+        justify-content: flex-start;
+      }
+
+      .auto-carousel {
+        margin-left: -40px;
+        margin-bottom: -40px;
+      }
+    }
+
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      .auto-carousel {
+        max-width: 95%;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .auto-carousel {
+        max-width: 600px;
+      }
+    }
+
+    /* ------------------------------ERP Ends ------------------------------------------- */
+
+    /* ------------------------------Transport Starts ---------------------------------------- */
+
+    #transportContainer {
+      background: linear-gradient(
+        90deg,
+        rgba(234, 73, 61, 0.02) 42.79%,
+        rgba(175, 0, 0, 0.02) 100%
+      );
+    }
+
+    #transport-impNote {
+      background: linear-gradient(
+        90deg,
+        rgba(234, 73, 61, 0.05) 42.79%,
+        rgba(175, 0, 0, 0.05) 100%
+      );
+    }
+
+    /* ------------------------------Transport ends -------------------------------------------- */
+
+    /* --------------------------------Automation starts---------------------------------------- */
+
+    #AutomationContainer {
+      background: linear-gradient(
+        89.98deg,
+        rgba(0, 168, 117, 0.02) 1.13%,
+        rgba(0, 110, 77, 0.02) 99.98%
+      );
+    }
+
+    #automation-impNote {
+      background: linear-gradient(
+        89.98deg,
+        rgba(0, 168, 117, 0.05) 1.13%,
+        rgba(0, 110, 77, 0.05) 99.98%
+      );
+    }
+  </style>
+  <body>
+    <!-- ******** Header Start ******* -->
+    <header>
+      <nav style="background-color: #fff" class="container-fluid p-3 navbar">
+        <div class="container nav-wrapper">
+          <div class="nav-logo">
+            <a href="home.html">
+              <img src="assets/images/Logo.webp" class="img-fluid" alt="Logo" />
+            </a>
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="home.html" class="nav-item home">Home</a></li>
+            <li>
+              <a href="automation3.html" class="nav-item active">Automation</a>
+            </li>
+            <li>
+              <a href="Product.html" class="nav-item">Product Tour</a>
+            </li>
+            <li><a href="about2.html" class="nav-item">About Us</a></li>
+            <li><a href="contact2.html" class="nav-item">Contact Us</a></li>
+            <li class="download-mobile">
+              <a href="Broucher.html" class="btn-demo">Download Broucher</a>
+            </li>
+          </ul>
+
+          <div class="nav-side">
+            <!-- Visible only on desktop -->
+            <a href="Broucher.html" class="btn-demo download-desktop"
+              >Download Broucher</a
+            >
+
+            <div class="responsive-menus">
+              <i class="fa-solid fa-bars" id="menuToggle"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- ********** Header End ******** -->
+
+    <section class="main-section" data-aos="fade-up" data-aos-duration="1500">
+      <div class="left-content">
+        <h1>
+          Smarter School <br />
+          Automation – Save Time, Improve Efficiency
+        </h1>
+        <p>
+          Automate routine tasks, enhance communication, and simplify school
+          operations with SchoolMate’s smart automation suite.
+        </p>
+        <div class="features">
+          <span class="feature1">Faster Workflows</span>
+          <span class="feature2">Faster Workflows</span>
+          <span class="feature3">Parent Engagement Tools</span>
+        </div>
+      </div>
+      <div class="right-image">
+        <img
+          src="assets/images/Slide-2.jpg"
+          alt="SchoolMate Dashboard Screenshot"
+        />
+      </div>
+    </section>
+    <!---------------------------- Hero section ends --------------------------->
+    <section
+      class="automation-wrapper"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
+      <div class="section-heading">
+        <h2>Smarter School Automation Starts Here</h2>
+        <p>Save Time, Reduce Errors, and Stay Connected</p>
+      </div>
+
+      <div class="automation-container">
+        <div class="automation-left">
+          <h3>Communication Automation</h3>
+          <h4>Keep Parents Informed – Instantly & Automatically</h4>
+          <ul>
+            <li>
+              • Automated News & Circulars – Schedule updates and announcements
+              ahead of time.
+            </li>
+            <li>
+              • Auto-Reminders – Follow up on unread messages with smart
+              reminders.
+            </li>
+            <li>
+              • Attendance Alerts – Instant notifications for Absent / Late /
+              Leave status.
+            </li>
+          </ul>
+          <div class="imp-note">
+            Strengthen trust and engagement with timely, consistent updates — no
+            manual follow-ups needed.
+          </div>
+        </div>
+
+        <div class="automation-right">
+          <div class="carousel" id="my-carousel">
+            <div class="carousel-toggle">
+              <div class="toggle-knob"></div>
+            </div>
+            <img
+              src="assets/images/Slide-2.jpg"
+              class="carousel-img active"
+              alt="Slide 1"
+            />
+            <img
+              src="assets/images/Slide-3.png"
+              class="carousel-img"
+              alt="Slide 2"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!------------------------------------- Communication ends ------------------------------------->
+    <!------------------------------------------- ERP Starts --------------------------------------->
+    <section class="auto-wrapper" data-aos="fade-up" data-aos-duration="1500">
+      <div class="auto-container">
+        <div class="auto-left">
+          <div class="auto-carousel">
+            <img
+              src="assets/images/Slide-4.png"
+              class="auto-carousel-img active"
+              alt="Slide 1"
+            />
+            <img
+              src="assets/images/Slide-5.jpg"
+              class="auto-carousel-img"
+              alt="Slide 2"
+            />
+            <div class="auto-carousel-toggle">
+              <div class="toggle-knob"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="auto-right">
+          <h3>ERP Automation</h3>
+          <h4>Simplify Admin Work with Auto-Powered ERP Tools</h4>
+          <ul class="bullet-list">
+            <li>
+              • Fee Reminders – Parents get automatic alerts for upcoming or
+              overdue payments.
+            </li>
+            <li>
+              • Instant Digital Receipts – Receipts are generated and shared the
+              moment payment is made.
+            </li>
+            <li>
+              • Automated Reports – Academic and financial reports delivered in
+              just a few clicks.
+            </li>
+          </ul>
+          <div class="auto-note">
+            Cut down admin hours by 50%. Eliminate human error and ensure
+            records stay updated in real-time.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-------------------------------------------- ERP Ends ------------------------------------------------------->
+    <!-- --------------------------------------------Transport starts -------------------------------------------->
+
+    <section
+      class="automation-wrapper"
+      data-aos="fade-up"
+      data-aos-duration="1500"
+    >
+      <div class="automation-container" id="transportContainer">
+        <div class="automation-left">
+          <h3>Transportation Automation</h3>
+          <h4>Live Bus Tracking with Real-Time Parent Alerts</h4>
+          <ul>
+            <li>
+              • GPS Integration – Live tracking of school buses on parent and
+              admin dashboards.
+            </li>
+            <li>
+              • Pickup & Drop Notifications – Real-time alerts when children
+              board or exit.
+            </li>
+            <li>
+              • Peace of Mind – Parents stay informed; schools stay in control.
+            </li>
+          </ul>
+          <div class="imp-note" id="transport-impNote">
+            Enhance student safety and simplify route planning for school
+            transport managers.
+          </div>
+        </div>
+
+        <div class="automation-right">
+          <div class="carousel" id="my-carousel">
+            <div class="carousel-toggle">
+              <div class="toggle-knob"></div>
+            </div>
+            <img
+              src="assets/images/Slide-6.png"
+              class="carousel-img active"
+              alt="Slide 1"
+            />
+            <img
+              src="assets/images/Slide-4.png"
+              class="carousel-img"
+              alt="Slide 2"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------Transport ends ----------------- -->
+    <!------------------------------Automation Starts  ----------------->
+
+    <section class="auto-wrapper" data-aos="fade-up" data-aos-duration="1500">
+      <div class="auto-container" id="AutomationContainer">
+        <div class="auto-left">
+          <div class="auto-carousel">
+            <img
+              src="assets/images/Slide-7.png"
+              class="auto-carousel-img active"
+              alt="Slide 1"
+            />
+            <img
+              src="assets/images/Slide-5.jpg"
+              class="auto-carousel-img"
+              alt="Slide 2"
+            />
+            <div class="auto-carousel-toggle">
+              <div class="toggle-knob"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="auto-right">
+          <h3
+            style="
+              background: linear-gradient(
+                89.98deg,
+                #00a875 1.13%,
+                #006e4d 99.98%
+              );
+              -webkit-background-clip: text;
+              color: transparent;
+            "
+          >
+            Academic Automation
+          </h3>
+          <h4 style="color: #017954">
+            Automate Marks, Homework, and Progress Reports.
+          </h4>
+          <ul class="bullet-list">
+            <li>
+              • Exam & Mark Entry Automation – Generate detailed report cards
+              effortlessly.
+            </li>
+            <li>
+              • Homework Notifications – Keep students and parents in sync with
+              daily tasks and deadlines.
+            </li>
+            <li>
+              • Academic Analytics – Track individual student progress, detect
+              gaps, and act faster.
+            </li>
+          </ul>
+          <div class="auto-note" id="automation-impNote">
+            Reduce teacher workload and support better academic outcomes with
+            automated intelligence.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------------------------Automation Ends ------------------------------------------ -->
+    <!-- --------------------------CTA Starts -------------------------------------------------->
+
+    <section class="cta-section" data-aos="fade-down" data-aos-duration="1500">
+      <div class="cta-content">
+        <h2>Ready to Embrace Smart Automation for Your School?</h2>
+        <p>
+          Let SchoolMate handle your daily academic and admin operations — so
+          you can focus on what really matters: quality education.
+          <strong></strong><br />
+        </p>
+        <button class="btn-demo mt-3">
+          <a style="color: white !important" href="" class="p-2"
+            >Book a free Demo</a
+          >
+        </button>
+      </div>
+    </section>
+
+    <!-- ------------------------------CTA Ends --------------------------------------------------- -->
+
+    <!-- ****** Section Footer Start ****** -->
+    <footer>
+      <div class="container p-5">
+        <div class="row mx-auto g-5 justify-content-center">
+          <div class="col-lg-2 col-12 col-md-6">
+            <h5>About Us</h5>
+            <a href="">Brief overview</a> <br />
+            <a href="">Mission & Vision</a>
+          </div>
+          <div class="col-lg-2 col-12 col-md-6">
+            <h5>Quick Links</h5>
+            <a href="">Home</a> <br />
+            <a href="">Features</a> <br />
+            <a href="">Pricing</a> <br />
+            <a href="">Contact</a>
+          </div>
+          <div class="col-lg-2 col-12 col-md-6">
+            <h5>Support</h5>
+            <a href="">Help Center</a> <br />
+            <a href="">FAQs</a> <br />
+            <a href="">User Guides</a>
+          </div>
+          <div class="col-lg-2 col-12 col-md-6">
+            <h5>Legel</h5>
+            <a href="">Privacy Policy</a> <br />
+            <a href="">Terms & Conditions</a>
+          </div>
+          <div class="col-lg-2 col-12 col-md-6">
+            <h5>Contact Us</h5>
+            <a href="">Email</a> <br />
+            <a href="">Phone</a> <br />
+            <a href="">Address</a>
+          </div>
+        </div>
+        <div
+          class="mt-4 d-flex gap-4 justify-content-center align-items-center"
+        >
+          <p class="mt-3">Follow Us on:</p>
+          <a href=""
+            ><img
+              src="assets/images/Instagram.webp"
+              class="img-fluid"
+              alt=""
+              srcset=""
+          /></a>
+          <a href=""
+            ><img src="assets/images/X.webp" class="img-fluid" alt=""
+          /></a>
+          <a href=""
+            ><img src="assets/images/Facebook.webp" class="img-fluid" alt=""
+          /></a>
+          <a href=""
+            ><img src="assets/images/Youtube.webp" class="img-fluid" alt=""
+          /></a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center copyright">
+        <p class="mt-3 text-center">
+          © 2025, ARA Discover Technologies Pvt. Ltd. | Preserving Innovation.
+        </p>
+      </div>
+    </footer>
+    <!-- ****** Section Footer End ****** -->
+
+    <!-- ******** JS File ******* -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- ***** Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- **** AOS *** -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script>
+      function initCarousel(carouselSelector) {
+        const carousel = document.querySelector(carouselSelector);
+        if (!carousel) return;
+
+        const images = carousel.querySelectorAll(
+          ".carousel-img, .auto-carousel-img"
+        );
+        const toggle = carousel.querySelector(
+          ".carousel-toggle, .auto-carousel-toggle"
+        );
+
+        let current = 0;
+        let interval;
+
+        function updateCarousel(index) {
+          images.forEach((img, i) => {
+            img.classList.toggle("active", i === index);
+          });
+          if (toggle) {
+            toggle.classList.toggle("active", index % 2 === 1);
+          }
+        }
+
+        function start() {
+          clearInterval(interval);
+          interval = setInterval(() => {
+            current = (current + 1) % images.length;
+            updateCarousel(current);
+          }, 5000);
+        }
+
+        if (toggle) {
+          toggle.addEventListener("click", () => {
+            current = (current + 1) % images.length;
+            updateCarousel(current);
+            start();
+          });
+        }
+
+        updateCarousel(current);
+        start();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        initCarousel(".automation-right .carousel");
+        initCarousel(".auto-left .auto-carousel");
+        initCarousel("#transportContainer .carousel");
+        initCarousel("#AutomationContainer .auto-carousel");
+      });
+    </script>
+
+    <!-- <script>
+      const images1 = document.querySelectorAll(".auto-carousel-img");
+      const toggle1 = document.querySelector(".auto-carousel-toggle");
+      let index = 0;
+
+      function showNextImage() {
+        images1.forEach((img, i) => {
+          img.classList.remove("active");
+          if (i === index) img.classList.add("active");
+        });
+
+        toggle1.classList.toggle("active", index === 1);
+        index = (index + 1) % images.length;
+      }
+
+      setInterval(showNextImage, 5000);
+    </script> -->
+  </body>
+</html>
