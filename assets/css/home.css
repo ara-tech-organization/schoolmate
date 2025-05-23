@@ -951,7 +951,7 @@ details[open] .arrow {
 .hero-heading {
   font-weight: 600;
   text-align: center;
-  font-size: 46px;
+  font-size: 3rem;
   line-height: 65px;
   color: black;
   margin-top: 50px;
@@ -992,8 +992,8 @@ details[open] .arrow {
 /* Responsive Breakpoints */
 @media (max-width: 575.98px) {
   .hero-heading {
-    font-size: 1.5rem;
-    line-height: 35px;
+    font-size: 2rem;
+    line-height: 45px;
   }
   .hero-subtext {
     font-size: 0.95rem;
@@ -1013,8 +1013,8 @@ details[open] .arrow {
 
 @media (min-width: 576px) and (max-width: 767.98px) {
   .hero-heading {
-    font-size: 1.75rem;
-    line-height: 35px;
+    font-size: 2.2rem;
+    line-height: 45px;
   }
   .hero-subtext {
     font-size: 1rem;
@@ -1026,28 +1026,23 @@ details[open] .arrow {
 
 @media (min-width: 768px) and (max-width: 991.98px) {
   .hero-heading {
-    font-size: 2rem;
-    line-height: 45px;
+    font-size: 2.4rem;
+    line-height: 55px;
   }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .hero-heading {
-    font-size: 2.25rem;
+    font-size: 3rem;
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1399.98px) {
   .hero-heading {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 
-@media (min-width: 1400px) {
-  .hero-heading {
-    font-size: 2.75rem;
-  }
-}
 
 
 .edu-section {
@@ -1063,7 +1058,7 @@ details[open] .arrow {
 }
 
 .edu-content h2 {
-  font-size: 2.75rem;
+  font-size: 3rem;
   font-weight: 900 !important;
   line-height: 1.4;
   color: #222;
@@ -1652,7 +1647,7 @@ font-weight: 600;
 
   .card {
     width: 100%;
-    padding: 1.5rem;
+    padding: 3rem;
   }
 
   .who-we-serve h2 {

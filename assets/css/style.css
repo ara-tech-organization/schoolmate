@@ -2514,11 +2514,12 @@ p {
 
 /* product demo------------------------- */
 .hero-sections {
-  height: 1000px;
+  height: 1024px;
+    background: linear-gradient(to bottom, #ffffff 0%, #fbf3e8 100%);
 }
 .hero-section {
   /* margin: 6rem 0 0 0; */
-  background-color: #fffaf3;
+  background: linear-gradient(to bottom, #ffffff 0%, #fbf3e8 100%);
   padding: 60px 20px;
   font-family: "Segoe UI", sans-serif;
   text-align: center;
@@ -2532,7 +2533,7 @@ p {
 }
 
 .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 20px;
@@ -2586,7 +2587,7 @@ p {
   margin-top: 160px;
 }
 .features-heading h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #1a1a1a;
   line-height: 1.2;
@@ -2708,7 +2709,7 @@ p {
   }
 
   .features-heading {
-    margin-top: 140px; /* Bring heading closer to the top */
+    margin-top: 280px; /* Bring heading closer to the top */
     text-align: center;
   }
 
@@ -2899,7 +2900,7 @@ p {
   }
 
   .features-heading{
-    margin-top: 0;
+    margin-top: 0px !important;
   }
 
 }
@@ -3112,16 +3113,17 @@ p {
 }
 .hero-top {
   width: 100%;
-  height: 80vh;
-  background: #fff4e6;
+  height: 70vh;
+    background: linear-gradient(to bottom, #ffffff 0%, #fbf3e8 100%);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
   padding: 0 1rem;
 }
 .hero-top .inner {
   max-width: 800px;
+  margin-top: 100px;
 }
 
 .hero-top h1 {
@@ -3131,7 +3133,7 @@ p {
   color: #f30000;
 }
 .hero-top h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
   color: #111;
@@ -3216,6 +3218,13 @@ p {
 
 /* —— RESPONSIVE NUDGE —— */
 @media (max-width: 768px) {
+  .hero-top {
+    height: 70vh;
+  }
+  .hero-top .inner {
+
+  margin-top: 90px !important;
+}
   .hero-top h1 {
     font-size: 2.5rem;
   }
@@ -3293,6 +3302,13 @@ p {
 }
 
 @media (max-width: 1144px) {
+    .hero-top {
+    height: 70vh;
+  }
+  .hero-top .inner {
+
+  margin-top: 90px !important;
+  }
   .card-container {
     margin-top: 150px;
   }
@@ -3349,15 +3365,48 @@ p {
 .inner {
   margin-top: 100px;
 }
+.hero-content h1 {
+  font-size: 2.5rem; /* default for <576px */
+}
 
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+    line-height: 40px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-content h1 {
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+}
+
+
+
+@media (min-width: 1400px) {
+  .hero-content h1 {
+    font-size: 3rem;
+    line-height: 65px;
+  }
+}
+@media (max-width: 575px) {
+.hero-content h1 {
+    font-size: 2rem;
+    line-height: 45px;
+  }
+}
 @media (max-width: 768px) {
   .hero-sections{
     height: 70vh;
   }
-  .hero-content h1{
-    font-size: 18px;
-    line-height: 28px;
-  }
+
    .hero-content p{
     font-size: 15px;
     line-height: 28px;
