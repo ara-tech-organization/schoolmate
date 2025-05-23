@@ -13,7 +13,7 @@
     <!-- ******** Link CSS ******* -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
     <!-- ******* Icon  ********-->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -133,7 +133,7 @@
       <div class="message-container">
              <div class="demo-form-clean">
   <h3 class="gradient-heading">Get Your Free<br />Brochure Instantly!</h3>
-  <form class="demo-form">
+   <form id="brochureForm"  class="demo-form">
     <input
       type="text"
       class="form-control"
@@ -264,6 +264,70 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+        <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("brochureForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        fullName: form.querySelector('input[placeholder*="Full Name"]').value.trim(),
+        mobile: form.querySelector('input[type="tel"]').value.trim(),
+        email: form.querySelector('input[type="email"]').value.trim(),
+        schoolName: form.querySelector('input[placeholder*="School/Institution Name"]').value.trim(),
+        schoolAddress: form.querySelector('input[placeholder*="School/Institution Address"]').value.trim(),
+        city: form.querySelector('input[placeholder*="City"]').value.trim(),
+      };
+
+      console.log("Sending data to API:", data); // ✅ This still logs your data
+
+      try {
+        const res = await fetch(
+          "https://schoolcommunication-gmdtekepd3g3ffb9.canadacentral-01.azurewebsites.net/api/postMSMSForm/schoolMateEnquiry",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: "Bearer 123",
+            },
+            body: JSON.stringify(data),
+          }
+        );
+
+        const json = await res.json();
+
+        if (!res.ok || json.error) {
+          throw new Error(json.message || "Something went wrong");
+        }
+
+        // 🎉 SUCCESS TOAST
+        Toastify({
+          text: json.message,
+          duration: 4000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        }).showToast();
+
+        form.reset(); // Optional: Reset form if needed
+
+      } catch (err) {
+        // 💀 ERROR TOAST
+        Toastify({
+          text: "❌ " + err.message,
+          duration: 5000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "linear-gradient(to right, #ff5f6d, #ffc371)",
+        }).showToast();
+      }
+    });
+  });
+</script>
+   <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
