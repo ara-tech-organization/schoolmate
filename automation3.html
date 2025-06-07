@@ -84,56 +84,56 @@
       margin-top: 15px;
     }
 
-    .features span {
-      padding: 6px 14px 6px 24px;
-      font-size: 0.8rem;
-      border-radius: 18px;
-      font-weight: 500;
-      position: relative;
-      cursor: pointer;
+ .features span {
+  padding: 6px 14px 6px 24px;
+  font-size: 0.8rem;
+  border-radius: 18px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+  background-color: #e0e0e0; /* default */
+  color: #757575;            /* default */
+  transition: all 0.3s ease;
+}
 
-      background-color: #e0e0e0; /* Light grey background */
-      color: #757575; /* Medium grey text */
-      transition: all 0.3s ease;
-    }
+.features span::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #9e9e9e;
+  transition: background-color 1s ease;
+}
 
-    .features span::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      position: absolute;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #9e9e9e; /* Grey dot */
-      transition: background-color 1s ease;
-    }
+/* FORCE the override */
+.feature1 {
+  background-color: #ffaa221a !important;
+  color: #ff8800 !important;
+}
+.feature1::before {
+  background-color: #ff8800 !important;
+}
 
-    /* Hover state styles */
-    .feature1:hover {
-      background-color: #ffaa221a;
-      color: #ff8800;
-    }
-    .feature1:hover::before {
-      background-color: #ff8800;
-    }
+.feature2 {
+  background-color: #ff51761a !important;
+  color: #ff5176 !important;
+}
+.feature2::before {
+  background-color: #ff5176 !important;
+}
 
-    .feature2:hover {
-      background-color: #ff51761a;
-      color: #ff5176;
-    }
-    .feature2:hover::before {
-      background-color: #ff5176;
-    }
+.feature3 {
+  background-color: #5f4eed1a !important;
+  color: #5f4eed !important;
+}
+.feature3::before {
+  background-color: #5f4eed !important;
+}
 
-    .feature3:hover {
-      background-color: #5f4eed1a;
-      color: #5f4eed;
-    }
-    .feature3:hover::before {
-      background-color: #5f4eed;
-    }
 
     /* === Right Image === */
     .right-image {
@@ -253,8 +253,7 @@
         max-width: 600px;
       }
     }
-
-    /* ----------------------------Communication starts---------------------------------------- */
+/* ----------------------------Communication starts---------------------------------------- */
     .automation-wrapper {
       padding: 60px 10%;
       background: #fff;
@@ -284,7 +283,6 @@
         rgba(223, 121, 37, 0.02) 67.91%,
         rgba(250, 250, 250, 0.02) 114.67%
       );
-      /* background-color: rebeccapurple; */
       border-radius: 20px;
       display: flex;
       flex-wrap: wrap;
@@ -292,6 +290,41 @@
       padding: 40px;
       position: relative;
       overflow: visible;
+      border-top: 2px solid rgba(223, 121, 37, 0.3); /* Top border */
+    }
+
+    .automation-container::before,
+    .automation-container::after {
+      content: "";
+      position: absolute;
+      top: 10px; /* Avoid the curved corner */
+      bottom: 10px; /* Avoid the curved corner */
+      width: 1px;
+      pointer-events: none;
+      border-radius: 20px;
+      z-index: 1;
+    }
+
+    .automation-container::before {
+      left: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(223, 121, 37, 0) 0%,
+        rgba(223, 121, 37, 0.3) 20%,
+        rgba(223, 121, 37, 0.3) 80%,
+        rgba(223, 121, 37, 0) 100%
+      );
+    }
+
+    .automation-container::after {
+      right: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(223, 121, 37, 0) 0%,
+        rgba(223, 121, 37, 0.3) 20%,
+        rgba(223, 121, 37, 0.3) 80%,
+        rgba(223, 121, 37, 0) 100%
+      );
     }
 
     .automation-left {
@@ -415,10 +448,9 @@
         padding: 30px 10px;
       }
 
-      .automation-wrapper{
+      .automation-wrapper {
         padding: 20px 8%;
         margin-top: 0 !important;
-
       }
 
       .automation-left {
@@ -453,17 +485,16 @@
         margin-top: 30px;
       }
 
-       .automation-wrapper{
+      .automation-wrapper {
         padding: 20px 8%;
         margin-top: 0 !important;
-
       }
 
       .carousel {
         margin: 0;
       }
 
-      .imp-note{
+      .imp-note {
         margin-top: 0 !important;
       }
     }
@@ -510,6 +541,41 @@
       );
       border-radius: 20px;
       overflow: visible;
+      position: relative;
+      border-top: 1px solid rgba(97, 41, 174, 0.3); /* Top border */
+    }
+
+    .auto-container::before,
+    .auto-container::after {
+      content: "";
+      position: absolute;
+      top: 10px; /* avoids rounded corners */
+      bottom: 10px; /* avoids rounded corners */
+      width: 1px;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .auto-container::before {
+      left: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(97, 41, 174, 0) 0%,
+        rgba(97, 41, 174, 0.3) 20%,
+        rgba(97, 41, 174, 0.3) 80%,
+        rgba(97, 41, 174, 0) 100%
+      );
+    }
+
+    .auto-container::after {
+      right: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(97, 41, 174, 0) 0%,
+        rgba(97, 41, 174, 0.3) 20%,
+        rgba(97, 41, 174, 0.3) 80%,
+        rgba(97, 41, 174, 0) 100%
+      );
     }
 
     .auto-left {
@@ -635,7 +701,7 @@
         padding: 30px 10px;
       }
 
-      .auto-wrapper{
+      .auto-wrapper {
         padding: 20px 8%;
       }
 
@@ -679,8 +745,8 @@
         padding-left: 0;
         text-align: left;
       }
-      .auto-note{
-         margin-top: 0 !important;
+      .auto-note {
+        margin-top: 0 !important;
       }
     }
 
@@ -731,13 +797,55 @@
 
     /* --------------------------------Automation starts---------------------------------------- */
 
-    #AutomationContainer {
-      background: linear-gradient(
-        89.98deg,
-        rgba(0, 168, 117, 0.02) 1.13%,
-        rgba(0, 110, 77, 0.02) 99.98%
-      );
-    }
+   #AutomationContainer {
+  background: linear-gradient(
+    89.98deg,
+    rgba(0, 168, 117, 0.02) 1.13%,
+    rgba(0, 110, 77, 0.02) 99.98%
+  );
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: visible;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-top: 1px solid rgba(0, 110, 77, 0.3); /* Top border */
+}
+
+#AutomationContainer::before,
+#AutomationContainer::after {
+  content: "";
+  position: absolute;
+  top: 10px; /* leave space for rounded corners */
+  bottom: 10px;
+  width: 1px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#AutomationContainer::before {
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 110, 77, 0) 0%,
+    rgba(0, 110, 77, 0.3) 20%,
+    rgba(0, 110, 77, 0.3) 80%,
+    rgba(0, 110, 77, 0) 100%
+  );
+}
+
+#AutomationContainer::after {
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 110, 77, 0) 0%,
+    rgba(0, 110, 77, 0.3) 20%,
+    rgba(0, 110, 77, 0.3) 80%,
+    rgba(0, 110, 77, 0) 100%
+  );
+}
+
 
     #automation-impNote {
       background: linear-gradient(
@@ -922,8 +1030,18 @@
     >
       <div class="automation-container" id="transportContainer">
         <div class="automation-left">
-          <h3>Transportation Automation</h3>
-          <h4>Live Bus Tracking with Real-Time Parent Alerts</h4>
+          <h3
+            style="
+              background: linear-gradient(90deg, #ea493d 42.79%, #af0000 100%);
+              -webkit-background-clip: text;
+              color: transparent;
+            "
+          >
+            Transportation Automation
+          </h3>
+          <h4 style="color: #cd251f">
+            Live Bus Tracking with Real-Time Parent Alerts
+          </h4>
           <ul>
             <li>
               • GPS Integration – Live tracking of school buses on parent and
@@ -1070,8 +1188,8 @@
           </div>
           <div class="col-lg-2 col-12 col-md-6">
             <h5>Legel</h5>
-            <a href="https://workdrive.zohopublic.in/writer/open/ekdik37a23aec330f4c4fab0106cce6ae16a4" target="_blank">Privacy Policy</a><br>
-            <a href="https://workdrive.zohopublic.in/writer/open/ekdik7fc5b234686f49f29a79aa84fe0b37a3">Terms & Conditions</a>
+            <a href="/privacypolicy.html" target="_blank">Privacy Policy</a><br>
+            <a href="/TermsandCondition.html" target="_blank">Terms & Conditions</a>
           </div>
           <div class="col-lg-2 col-12 col-md-6">
             <h5>Contact Us</h5>

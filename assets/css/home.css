@@ -1547,6 +1547,8 @@ details[open] .arrow {
   padding: 4rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: var(--bg-light);
+  border-radius: 20px;
 }
 
 .who-we-serve h2{

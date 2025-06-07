@@ -2187,6 +2187,8 @@ footer a:hover {
   flex: 1;
   max-width: 480px;
   margin: 0 auto;
+  background-color: #FBF3E880;
+padding: 30px;
 }
 
 
@@ -2515,7 +2517,7 @@ p {
 /* product demo------------------------- */
 .hero-sections {
   height: 1024px;
-    background: linear-gradient(to bottom, #ffffff 0%, #fbf3e8 100%);
+    /* background: linear-gradient(to bottom, #ffffff 0%, #fbf3e8 100%); */
 }
 .hero-section {
   /* margin: 6rem 0 0 0; */
@@ -2797,7 +2799,7 @@ p {
   background: #fff;
   border-radius: 8px;
   /* remove strong shadow */
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.245);
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.245); */
   /* or if you want no shadow at all, use: box-shadow: none; */
   overflow: visible;
   cursor: pointer;
@@ -3097,7 +3099,7 @@ p {
     font-size: 1rem;
   }
   .youtube-thumbnail {
-    height: 500px;
+    height: 350px;
   }
   .play-button {
     top: 40%;
@@ -3105,8 +3107,11 @@ p {
 }
 @media (max-width:400px){
    .youtube-thumbnail {
-    height: 300px;
+    height: 200px;
   }
+  .hero-section {
+    padding: 0;
+}
 }
 
 /* contact2-------------------------------- */
