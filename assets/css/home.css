@@ -1932,14 +1932,22 @@ font-weight: 600;
     max-width: 360px;
   }
 }
+.mobile-only-btn {
+  display: none;
+}
 
+@media (max-width: 575.98px) {
+  .mobile-only-btn {
+    display: inline-block;
+  }
+}
 
 .brochure-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
+  padding: 120px 20px;
   gap: 40px;
   background: linear-gradient(to bottom, #ffffff 0%, #fbf3e8 100%);
   min-height: 100vh;
@@ -2033,38 +2041,80 @@ font-weight: 600;
   color: #666;
   margin-top: 5px;
 }
-
-/* RESPONSIVE BREAKPOINTS */
-@media (max-width: 991px) {
+/* Below 576px - Mobile Portrait */
+@media (max-width: 575.98px) {
   .brochure-section {
     flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
-  }
-
-  .brochure-content,
-  .brochure-form {
-    max-width: 100%;
+    padding: 40px 15px;
   }
 
   .brochure-content h2 {
+    font-size: 32px;
+    line-height: 42px;
     text-align: center;
   }
 
   .brochure-content p {
     text-align: center;
   }
-}
 
-@media (max-width: 576px) {
   .brochure-form {
-    padding: 20px;
+    min-width: 100%;
+    padding: 20px 15px;
   }
 
-  .download-btn-default,
-  .download-btn-hover {
-    font-size: 0.9rem;
-    padding: 10px;
+  .brochure-form input {
+    font-size: 0.95rem;
+  }
+}
+
+/* 768px - 991px - Tablets */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .brochure-section {
+    gap: 30px;
+    padding: 60px 20px;
+  }
+
+  .brochure-content h2 {
+    font-size: 42px;
+    line-height: 55px;
+  }
+
+  .brochure-form {
+    min-width: 100%;
+    max-width: 500px;
+  }
+}
+
+/* 992px - 1199px - Small Desktops / Large Tablets */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .brochure-section {
+    gap: 40px;
+  }
+
+  .brochure-content h2 {
+    font-size: 46px;
+    line-height: 60px;
+  }
+
+  .brochure-form {
+    max-width: 450px;
+  }
+}
+
+/* 1200px - 1399px - Standard Large Screens */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .brochure-section {
+    gap: 50px;
+  }
+
+  .brochure-content h2 {
+    font-size: 50px;
+    line-height: 65px;
+  }
+
+  .brochure-form {
+    max-width: 450px;
   }
 }
 
