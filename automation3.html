@@ -35,8 +35,8 @@
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      background: #fffaf7;
+      /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+      /* background: #fffaf7; */
       color: #222;
       overflow-x: hidden;
     }
@@ -55,7 +55,7 @@
         rgba(255, 255, 255, 0.5) 0%,
         rgba(251, 243, 232, 0.5) 100%
       );
-      padding: 80px 10% 0;
+      padding: 150px 10% 0px 100px !important;
     }
 
     /* === Left Side === */
@@ -68,6 +68,7 @@
       font-size: 3rem;
       font-weight: 700;
       line-height: 1.5;
+      /* padding-top: 50px; */
     }
 
     .left-content p {
@@ -161,7 +162,7 @@
     @media (max-width: 575.98px) {
       .main-section {
         flex-direction: column;
-        padding: 40px 5%;
+        padding: 140px 5% 0px !important;
       }
 
       .left-content h1 {
@@ -408,9 +409,9 @@
     }
 
     .carousel:hover {
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-      transform: scale(1.02);
-      cursor: pointer;
+      /* box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+      /* transform: scale(1.02); */
+      /* cursor: pointer; */
     }
 
     .carousel-toggle {
@@ -598,11 +599,11 @@
         box-shadow 0.5s ease;
     }
 
-    .auto-carousel:hover {
+    /* .auto-carousel:hover {
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       transform: scale(1.02);
       cursor: pointer;
-    }
+    } */
 
     .auto-carousel-img {
       width: 100%;
@@ -858,7 +859,7 @@
   <body>
     <!-- ******** Header Start ******* -->
     <header>
-      <nav style="background-color: #fff" class="container-fluid p-3 navbar">
+       <nav style="background-color: #fff; position: fixed; z-index: 9;" class="container-fluid p-3 navbar">
         <div class="container nav-wrapper">
           <div class="nav-logo">
             <a href="home.html">
@@ -1220,9 +1221,9 @@
           /></a>
         </div>
       </div>
-      <div class="d-flex justify-content-center copyright">
-        <p class="mt-3 text-center">
-          © 2025, ARA Discover Technologies Pvt. Ltd. | Preserving Innovation.
+       <div class="d-flex justify-content-center copyright">
+        <p class="text-center">
+          Built With ❤️ by ARA Discover Technologies
         </p>
       </div>
     </footer>

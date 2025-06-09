@@ -59,9 +59,10 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-/* Navbar Start */
+
 .nav-bar{
   background-color: red !important;
+  position: fixed;
 }
 .nav-wrapper {
   display: flex;
@@ -953,6 +954,7 @@ margin-bottom: 5rem;
 .section-portal .mockups p {
   font-size: 14px;
   font-weight: 600;
+
 }
 
 .section-portal .mockups .instant p {
@@ -969,6 +971,8 @@ margin-bottom: 5rem;
 
 .section-portal .mockups .track p {
   color: #dc433e;
+  left: 9%;
+  position: relative;
 }
 
 .section-portal .mockups .fees p {
@@ -1012,7 +1016,7 @@ margin-bottom: 5rem;
 .section-portal .mockups .track {
   position: absolute;
   top: 0;
-  right: 11%;
+  right: 10%;
   animation: moves 3s ease-in infinite;
 }
 
@@ -1058,7 +1062,7 @@ margin-bottom: 5rem;
 
 /* Section Footer Start */
 footer {
-  background-color: #f3f3f3;
+  background-color: #ffffff;
 }
 
 footer h5 {
@@ -1085,6 +1089,7 @@ footer a:hover {
   background-color: #000000;
   color: #fff !important;
   padding: 6px;
+  margin: 0;
 }
 
 .copyright p{
@@ -2100,13 +2105,14 @@ footer a:hover {
 }
 
 .demo-booking-wrapper {
-  margin: 9rem 0 0 0;
+  margin: 5rem 0 0 0;
   display: flex;
   justify-content: space-between;
  align-items: stretch;
   padding: 40px 80px; /* give room to breathe */
   gap: 40px;
   flex-wrap: nowrap;
+  background-color: #FBF3E880;
 }
 
 .tilted-card {
@@ -2187,7 +2193,7 @@ footer a:hover {
   flex: 1;
   max-width: 480px;
   margin: 0 auto;
-  background-color: #FBF3E880;
+  background-color: #ffffff;
 padding: 30px;
 }
 
@@ -2395,6 +2401,7 @@ p {
   text-align: center;
   margin: 7rem 0 0 0; /* space above & below */
   /* background-color: red; */
+
 }
 
 
@@ -2523,7 +2530,7 @@ p {
   /* margin: 6rem 0 0 0; */
   background: linear-gradient(to bottom, #ffffff 0%, #fbf3e8 100%);
   padding: 60px 20px;
-  font-family: "Segoe UI", sans-serif;
+  /* font-family: "Segoe UI", sans-serif; */
   text-align: center;
   height: 80vh;
 }
@@ -2532,6 +2539,7 @@ p {
   max-width: 900px;
   margin: 0 auto;
   line-height: 28px;
+
 }
 
 .hero-content h1 {
@@ -2540,6 +2548,8 @@ p {
   color: #1a1a1a;
   margin-bottom: 20px;
   line-height: 58px;
+  padding-top: 80px;
+
 }
 
 .hero-content p {
@@ -2573,7 +2583,7 @@ p {
 
 .features-section {
   background-color: #ffffff;
-  padding: 80px 20px;
+  padding: 150px 20px;
 }
 .features-container {
   display: flex;
@@ -2754,11 +2764,13 @@ p {
   display: flex;
   gap: 10rem;
   max-width: 1400px;
-  margin: 10rem auto;
+  margin: 5rem auto;
    overflow-x: hidden;
    padding: 40px;
    border-radius: 20px;
      background-color: #f2f7f6;
+     justify-content: center;
+     align-items: center;
 }
 .hiw-intro {
   flex: 1;
@@ -3047,7 +3059,7 @@ p {
 
 .cta-section {
   margin: 7rem 0 0 0;
-  background-color: #fbf3e8;
+  background-color: #fbf3e867;
   padding: 4rem 1.5rem;
   text-align: center;
   display: flex;
@@ -3060,7 +3072,7 @@ p {
 }
 .home-cta-section {
   margin: 12rem 0 0 0 !important;
-  background-color: #fbf3e8;
+  background-color: #fbf3e867;
   padding: 4rem 1.5rem;
   text-align: center;
   display: flex;
@@ -3139,6 +3151,7 @@ p {
 .hero-top h1 {
   font-size: 3rem;
 
+
   margin-bottom: 0.5rem;
   color: #f30000;
 }
@@ -3146,7 +3159,10 @@ p {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  padding-top: 45px;
+
   color: #111;
+
 }
 .hero-top p {
   /* margin-top: 50px; */
@@ -3175,7 +3191,7 @@ p {
 .card {
   background: #fff;
   border-radius: 1rem;
-  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.1); */
   padding: 2rem 1.5rem;
   flex: 1 1 260px;
   max-width: 380px;
@@ -3383,6 +3399,7 @@ p {
   .hero-content h1 {
     font-size: 2.5rem;
     line-height: 40px;
+    padding-top: 50px;
   }
 }
 
@@ -3404,6 +3421,7 @@ p {
   .hero-content h1 {
     font-size: 3rem;
     line-height: 65px;
+    padding-top: 110px !important;
   }
 }
 @media (max-width: 575px) {
